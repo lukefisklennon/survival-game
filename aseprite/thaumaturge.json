@@ -1,0 +1,40 @@
+{ "frames": [
+   {
+    "filename": "thaumaturge 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   },
+   {
+    "filename": "thaumaturge 54.aseprite",
+    "frame": { "x": 40, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.9-x64",
+  "image": "C:\\Users\\Max Packard\\Documents\\GitHub\\survival-game\\aseprite\\thaumaturge.png",
+  "format": "RGBA8888",
+  "size": { "w": 80, "h": 40 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Still Sprite", "from": 0, "to": 0, "direction": "forward" },
+   { "name": "Run Cycle", "from": 1, "to": 8, "direction": "forward" },
+   { "name": "Static Jump", "from": 9, "to": 12, "direction": "forward" },
+   { "name": "Moving Jump", "from": 13, "to": 16, "direction": "forward" },
+   { "name": "Breathing", "from": 17, "to": 33, "direction": "forward" },
+   { "name": "Fist Attacks", "from": 34, "to": 53, "direction": "forward" },
+   { "name": "Run Start", "from": 54, "to": 54, "direction": "forward" },
+   { "name": "Mapping", "from": 55, "to": 59, "direction": "forward" },
+   { "name": "Mapping 2", "from": 60, "to": 64, "direction": "forward" }
+  ]
+ }
+}
