@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/iONinja/survival-game/issues"
   },
-  "homepage": "https://github.com/iONinja/survival-game#readme"
+  "homepage": "https://github.com/iONinja/survival-game#readme",
+  "dependencies": {
+    "matter-js": "^0.14.2",
+    "pixi.js": "^4.8.5"
+  }
 }
