@@ -1,7 +1,16 @@
 { "frames": [
    {
-    "filename": "ground-below.aseprite",
+    "filename": "ground-below #Diffuse 0.aseprite",
     "frame": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 },
+    "duration": 100
+   },
+   {
+    "filename": "ground-below #Diffuse 1.aseprite",
+    "frame": { "x": 16, "y": 0, "w": 16, "h": 16 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
@@ -12,14 +21,14 @@
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.9-x64",
-  "image": "C:\\Users\\Max Packard\\Documents\\GitHub\\survival-game\\aseprite\\ground-below.png",
+  "image": "C:\\Users\\Max Packard\\Documents\\GitHub\\survival-game\\src\\images\\ground-below.png",
   "format": "RGBA8888",
-  "size": { "w": 16, "h": 16 },
+  "size": { "w": 32, "h": 16 },
   "scale": "1",
   "frameTags": [
-   { "name": "Diffuse", "from": 0, "to": 0, "direction": "forward" },
-   { "name": "Left", "from": 1, "to": 1, "direction": "forward" },
-   { "name": "Right", "from": 2, "to": 2, "direction": "forward" }
+   { "name": "Diffuse", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "Left", "from": 2, "to": 2, "direction": "forward" },
+   { "name": "Right", "from": 3, "to": 3, "direction": "forward" }
   ]
  }
 }
