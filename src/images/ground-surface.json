@@ -1,7 +1,16 @@
 { "frames": [
    {
-    "filename": "ground-surface.aseprite",
+    "filename": "ground-surface 0.aseprite",
     "frame": { "x": 0, "y": 0, "w": 16, "h": 32 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 32 },
+    "sourceSize": { "w": 16, "h": 32 },
+    "duration": 100
+   },
+   {
+    "filename": "ground-surface 1.aseprite",
+    "frame": { "x": 16, "y": 0, "w": 16, "h": 32 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 32 },
@@ -14,7 +23,7 @@
   "version": "1.2.9-x64",
   "image": "C:\\Users\\Max Packard\\Documents\\GitHub\\survival-game\\src\\images\\ground-surface.png",
   "format": "RGBA8888",
-  "size": { "w": 16, "h": 32 },
+  "size": { "w": 32, "h": 32 },
   "scale": "1",
   "frameTags": [
   ]
