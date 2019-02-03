@@ -1,16 +1,16 @@
-var Matter = require("matter-js");
+var Matter = require("matter-js")
 
 module.exports = function() {
-	window.engine = Matter.Engine.create();
+	window.engine = Matter.Engine.create()
 
-	PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+	PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST
 
-	window.game = new PIXI.Application();
-	document.body.appendChild(game.view);
+	window.pixi = new PIXI.Application()
+	document.body.appendChild(pixi.view)
 
 	function resize() {
-		game.renderer.resize(window.innerWidth, window.innerHeight);
+		pixi.renderer.resize(window.innerWidth, window.innerHeight)
 	}
-	window.onresize = resize;
-	resize();
+	window.onresize = resize
+	resize()
 }
