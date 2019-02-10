@@ -10,6 +10,7 @@ module.exports = new class Camera {
 
 	set x(x) {
 		this.container.x = -x + pixi.stage.width / 2
+	}
 
 	set y(y) {
 		this.container.y = -y + pixi.stage.height / 2

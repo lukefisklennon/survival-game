@@ -1,7 +1,9 @@
-var Entities = require("./entities");
+var Entities = require("./entities")
+var Environment = require("./environment")
 
-module.exports = new class World {
+module.exports = class World {
 	constructor() {
 		this.entities = new Entities()
+		this.environment = new Environment()
 	}
-}()
+}

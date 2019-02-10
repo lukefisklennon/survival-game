@@ -4,5 +4,11 @@
 			"width": 11,
 			"height": 31
 		}
+	},
+	"ground-below": {
+		"hitbox": {
+			"width": 16,
+			"height": 16
+		}
 	}
 }

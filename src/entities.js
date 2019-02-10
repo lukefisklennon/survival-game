@@ -1,15 +1,12 @@
 var Matter = require("matter-js")
 var Sprite = require("./sprite")
+var Store = require("./store")
 var config = require("./config")
 var entitiesData = require("./entities.json")
 
-var entities = []
-
-module.exports = class Entities {
-	create(...args) {
-		var entity = new Entity(...args)
-		entities.push(entity)
-		return entity
+module.exports = class Entities extends Store {
+	constructor() {
+		super(Entity)
 	}
 
 	update() {
@@ -17,21 +14,32 @@ module.exports = class Entities {
 			entity.update()
 		})
 	}
+}
 
-	loop(callback) {
-		entities.forEach(callback)
-	}
+var allOptions = {
+	static: false
 }
 
 class Entity {
-	constructor(resource) {
+	constructor(resource, options) {
+		if (arguments.length < 2) {
+			options = {}
+		}
+		for (key in allOptions) {
+			if (!(key in options)) {
+				options[key] = allOptions[key]
+			}
+		}
 		var data = entitiesData[resource]
 		this.sprite = new Sprite(resource)
 		this.x = 550
 		this.y = 0
 		this.width = data.hitbox.width * config.scale
 		this.height = data.hitbox.height * config.scale
-		this.body = Matter.Bodies.rectangle(this.x, this.y, this.width, this.height, {inertia: Infinity})
+		this.body = Matter.Bodies.rectangle(this.x, this.y, this.width, this.height, {
+			static: options.static,
+			inertia: Infinity
+		})
 		Matter.World.add(engine.world, this.body)
 		this.sprite.anchor.set(0.5, (this.sprite.height - this.height / 2) / this.sprite.height)
 		if (config.debug) {

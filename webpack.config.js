@@ -1,5 +1,5 @@
-var path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+var path = require("path")
+var HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
 	mode: "development",
@@ -43,4 +43,4 @@ module.exports = {
 	devServer: {
 		port: 3000
 	}
-};
+}

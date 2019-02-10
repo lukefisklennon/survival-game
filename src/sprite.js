@@ -1,9 +1,9 @@
 var config = require("./config")
 
 module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
-	constructor(id) {
+	constructor(resource) {
 		var animations = {}
-		var base = "./images/" + id
+		var base = "./images/" + resource
 		var image = require(base + ".png")
 		var data = require(base + ".json")
 		var texture = PIXI.Texture.from(image)
@@ -14,7 +14,10 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 				for (var i = tag.from; i <= tag.to; i++) {
 					var frame = data.frames[i]
 					var rect = frame.frame
-					animations[tag.name].push({texture: new PIXI.Texture(texture, new PIXI.Rectangle(rect.x, rect.y, rect.w, rect.h)), time: frame.duration})
+					animations[tag.name].push({
+						texture: new PIXI.Texture(texture, new PIXI.Rectangle(rect.x, rect.y, rect.w, rect.h)),
+						time: frame.duration
+					})
 				}
 			}
 		})
