@@ -1,5 +1,5 @@
 {
+	"debug": false,
 	"scale": 7,
-	"debug": true,
 	"deltaLimit": 100
 }

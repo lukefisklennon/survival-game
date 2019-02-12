@@ -23,15 +23,23 @@ class Terrain extends Store {
 	}
 }
 
+var asdf = 0;
+
 class Column {
 	constructor() {
 		this.blocks = []
 		for (var i = 0; i < columnHeight; i++) {
-			console.log(world)
-			this.blocks.push(world.entities.emplace("ground-below", {
+			var block = world.entities.emplace("ground-below", {
 				static: true
-			}))
+			})
+			this.blocks.push(block)
+			block.x = 500 + asdf * this.blocks[0].width
+			block.y = 500 + block.height * i
 		}
 		this.surface = new Sprite("ground-surface")
+		this.surface.x = 500 + asdf * this.blocks[0].width
+		this.surface.y = 500 - this.blocks[0].height / 2
+		this.surface.alpha = 0.5;
+		asdf++;
 	}
 }

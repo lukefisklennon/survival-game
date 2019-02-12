@@ -10,11 +10,15 @@ require("./index.scss")
 load(() => {
 	window.world = new World()
 
-	for (var i = 0; i < 5; i++) {
-		var entity = world.entities.emplace("thaumaturge")
-		entity.sprite.state = "static"
-	}
+	var entity = world.entities.emplace("thaumaturge")
+	entity.sprite.state = "static"
+	entity.x = 700
+	entity.y = 100
 
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
 	world.environment.terrain.emplaceRight()
 
 	pixi.ticker.add(() => {

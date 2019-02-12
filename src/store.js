@@ -21,6 +21,10 @@ module.exports = class Store {
 		return object
 	}
 
+	get(index) {
+		return this.list[index]
+	}
+
 	loop(callback) {
 		this.list.forEach(callback)
 	}
