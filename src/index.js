@@ -12,9 +12,26 @@ load(() => {
 
 	var entity = world.entities.emplace("thaumaturge")
 	entity.sprite.state = "static"
-	entity.x = 700
+	entity.x = 650
 	entity.y = 100
 
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
+	world.environment.terrain.emplaceRight()
 	world.environment.terrain.emplaceRight()
 	world.environment.terrain.emplaceRight()
 	world.environment.terrain.emplaceRight()

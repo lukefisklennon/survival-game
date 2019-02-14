@@ -7,7 +7,7 @@ module.exports = class Environment {
 	}
 }
 
-var columnHeight = 3
+var columnHeight = 10
 
 class Terrain extends Store {
 	constructor() {
@@ -28,18 +28,19 @@ var asdf = 0;
 class Column {
 	constructor() {
 		this.blocks = []
+		var yyy = 800 + Math.floor(Math.random() * 4) * 7
 		for (var i = 0; i < columnHeight; i++) {
 			var block = world.entities.emplace("ground-below", {
 				static: true
 			})
 			this.blocks.push(block)
-			block.x = 500 + asdf * this.blocks[0].width
-			block.y = 500 + block.height * i
+			block.x = 0 + asdf * this.blocks[0].width
+			block.y = yyy + block.height * i
 		}
 		this.surface = new Sprite("ground-surface")
-		this.surface.x = 500 + asdf * this.blocks[0].width
-		this.surface.y = 500 - this.blocks[0].height / 2
-		this.surface.alpha = 0.5;
+		this.surface.x = 0 + asdf * this.blocks[0].width
+		this.surface.y = yyy - this.blocks[0].height / 2
+		this.surface.alpha = 1;
 		asdf++;
 	}
 }
