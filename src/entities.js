@@ -62,11 +62,11 @@ class Entity {
 	}
 
 	set x(x) {
-		Matter.Body.setPosition(this.body, {x: x, y: this.y});
+		Matter.Body.setPosition(this.body, {x: x, y: this.y})
 	}
 
 	set y(y) {
-		Matter.Body.setPosition(this.body, {x: this.x, y: y});
+		Matter.Body.setPosition(this.body, {x: this.x, y: y})
 	}
 
 	update() {

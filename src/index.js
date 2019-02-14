@@ -6,6 +6,7 @@ require("./setup")()
 var load = require("./loader")
 var Sprite = require("./sprite")
 require("./index.scss")
+require("./config")
 
 load(() => {
 	window.world = new World()
@@ -15,28 +16,9 @@ load(() => {
 	entity.x = 650
 	entity.y = 100
 
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
-	world.environment.terrain.emplaceRight()
+	for (var i = 0; i < 20; i++) {
+		world.environment.terrain.emplaceRight(700 + Math.floor(Math.random() * 4) * config.scale)
+	}
 
 	pixi.ticker.add(() => {
 		var delta = pixi.ticker.elapsedMS

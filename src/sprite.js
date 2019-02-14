@@ -30,7 +30,6 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 			}
 		})
 		var state = Object.keys(animations)[0]
-		console.log(data.frames)
 		super(animations[state])
 		this.anchor.set(0.5, 0.5)
 		this.scale = new PIXI.Point(config.scale, config.scale)
