@@ -35,7 +35,7 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 		this.scale = new PIXI.Point(config.scale, config.scale)
 		this._state = state
 		this.animations = animations
-		pixi.stage.addChild(this)
+		world.camera.add(this)
 		this.play()
 	}
 

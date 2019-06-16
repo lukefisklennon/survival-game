@@ -38,6 +38,7 @@ class Entity {
 		Matter.World.add(world.engine.world, this.body)
 		this.sprite.anchor.set(0.5, (this.sprite.height - this.height / 2) / this.sprite.height)
 		this.controller = options.controller
+		this.isTouchingGround = false
 
 		if (config.debug) {
 			var graphics = new PIXI.Graphics()
@@ -45,7 +46,7 @@ class Entity {
 			graphics.drawRect(0, 0, this.width, this.height)
 			graphics.pivot.x = this.width / 2
 			graphics.pivot.y = this.height / 2
-			pixi.stage.addChild(graphics)
+			world.camera.add(graphics)
 			this.debugBox = graphics
 		}
 	}
@@ -77,10 +78,15 @@ class Entity {
 				if (this.sprite.state == "run-start") this.sprite.state = "static"
 			}, 83 * yeet)
 		}
+
+		console.log(this.isTouchingGround)
+		if (input.jump && this.isTouchingGround) {
+			Matter.Body.applyForce(this.body, {x: 0, y: 0}, {x: 0, y: -0.1})
+		}
 	}
 
 	update() {
-		if (this.controller) this.controller.run(this)
+		this.updateTouchingGround()
 		this.sprite.x = this.x
 		this.sprite.y = this.y
 		this.sprite.rotation = this.body.angle
@@ -89,6 +95,11 @@ class Entity {
 			this.debugBox.y = this.y
 			this.debugBox.rotation = this.body.angle
 		}
+		if (this.controller) this.controller.run(this)
+	}
+
+	updateTouchingGround() {
+		this.touchingGround = false
 	}
 
 	get x() {

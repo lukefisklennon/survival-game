@@ -28,4 +28,8 @@ module.exports = class Store {
 	loop(callback) {
 		this.list.forEach(callback)
 	}
+
+	get length() {
+		return this.list.length
+	}
 }

@@ -13,18 +13,19 @@ var columnHeight = 10
 class Terrain extends Store {
 	constructor() {
 		super(Column)
-		leftEdge = 0
-		rightEdge = 0
+		this.leftEdge = 0
+		this.rightEdge = 0
+		this.columnWidth = config.terrainColumnWidth * config.scale
 	}
 
 	emplaceLeft(...args) {
-		this.add(this.create(leftEdge, ...args), 0)
-		leftEdge -= 16 * config.scale
+		this.add(this.create(this.leftEdge, ...args), 0)
+		this.leftEdge -= this.columnWidth
 	}
 
 	emplaceRight(...args) {
-		this.add(this.create(rightEdge, ...args), this.list.length - 1)
-		rightEdge += 16 * config.scale
+		this.add(this.create(this.rightEdge, ...args), this.list.length - 1)
+		this.rightEdge += this.columnWidth
 	}
 }
 

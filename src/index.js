@@ -3,27 +3,26 @@ var Matter = require("matter-js")
 var config = require("./config")
 var load = require("./loader")
 var Sprite = require("./sprite")
-var PlayerController = require("./player-controller")
 var World = require("./world")
+var PlayerController = require("./player-controller")
 require("./index.scss")
 require("./config")
 
 require("./setup")()
 
-var iii = require("./input")
-
 load(() => {
 	window.world = new World()
 
-	var entity = world.entities.emplace("thaumaturge", {
+	var player = world.entities.emplace("thaumaturge", {
 		controller: new PlayerController()
 	})
-	entity.sprite.state = "static"
-	entity.x = 620
-	entity.y = 100
+	player.sprite.state = "static"
+	player.x = 620
+	player.y = 100
+	world.player = player
 
 	for (var i = 0; i < 20; i++) {
-		world.environment.terrain.emplaceRight(700)// + Math.floor(Math.random() * 4) * config.scale)
+		world.environment.terrain.emplaceRight(700)// + Math.floor(Math.random() * 20) * config.scale)
 	}
 
 	pixi.ticker.add(() => {
