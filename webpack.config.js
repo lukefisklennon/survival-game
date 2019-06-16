@@ -1,5 +1,19 @@
 var path = require("path")
 var HtmlWebpackPlugin = require("html-webpack-plugin")
+var fs = require("fs")
+
+var dirs = {
+	"images": ["png"]
+}
+
+var data = {}
+for (var dir in dirs) {
+	data[dir] = fs.readdirSync("./src/" + dir).filter(file => {
+		return dirs[dir].includes(file.split(".")[1])
+	})
+}
+
+fs.writeFileSync("./src/assets.json", JSON.stringify(data))
 
 module.exports = {
 	mode: "development",

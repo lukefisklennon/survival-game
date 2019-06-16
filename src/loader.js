@@ -6,6 +6,4 @@ for (var type in data) {
 	})
 }
 
-module.exports = callback => {
-	PIXI.loader.load(callback)
-}
+module.exports = callback => PIXI.loader.load(callback)

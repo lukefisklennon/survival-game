@@ -1,5 +1,9 @@
 {
 	"debug": false,
 	"scale": 7,
-	"deltaLimit": 100
+	"deltaLimit": 100,
+	"player": {
+		"speed": 10,
+		"accelerationFactor": 0.5
+	}
 }

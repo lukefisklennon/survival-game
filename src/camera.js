@@ -1,4 +1,4 @@
-module.exports = new class Camera {
+module.exports = class Camera {
 	constructor() {
 		this.container = new PIXI.Container()
 		pixi.stage.addChild(container)

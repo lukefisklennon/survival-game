@@ -40,9 +40,11 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 	}
 
 	set state(state) {
-		this._state = state
-		this.textures = this.animations[this._state]
-		this.play()
+		if (this._state != state) {
+			this._state = state
+			this.textures = this.animations[this._state]
+			this.play()
+		}
 	}
 
 	get state() {

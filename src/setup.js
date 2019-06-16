@@ -1,8 +1,6 @@
 var Matter = require("matter-js")
 
 module.exports = function() {
-	window.engine = Matter.Engine.create()
-
 	PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST
 
 	window.pixi = new PIXI.Application()
