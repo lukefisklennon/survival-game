@@ -22,7 +22,7 @@ load(() => {
 	world.player = player
 
 	for (var i = 0; i < 20; i++) {
-		world.environment.terrain.emplaceRight(700)// + Math.floor(Math.random() * 20) * config.scale)
+		world.environment.terrain.emplaceRight(((i % 4 < 2) ? 500 : 0) + 500)// + Math.floor(Math.random() * 4) * config.scale)
 	}
 
 	pixi.ticker.add(() => {

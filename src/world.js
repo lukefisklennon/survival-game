@@ -10,6 +10,24 @@ module.exports = class World {
 		this.camera = new Camera()
 		this.entities = new Entities()
 		this.environment = new Environment()
+
+		Matter.Events.on(this.engine, "collisionStart", event => {
+			event.pairs.forEach(pair => {
+				var a = pair.bodyA.entity
+				var b = pair.bodyB.entity
+				a.emit("collisionStart", b, pair)
+				b.emit("collisionStart", a, pair)
+			})
+		})
+
+		Matter.Events.on(this.engine, "collisionEnd", event => {
+			event.pairs.forEach(pair => {
+				var a = pair.bodyA.entity
+				var b = pair.bodyB.entity
+				a.emit("collisionEnd", b, pair)
+				b.emit("collisionEnd", a, pair)
+			})
+		})
 	}
 
 	update(delta) {

@@ -1,0 +1,29 @@
+{
+	"static": {
+		"loop": false
+	},
+	"run": {
+		"loop": true
+	},
+	"jump-static": {
+		"loop": false
+	},
+	"jump-static-end": {
+		"loop": false
+	},
+	"jump-run": {
+		"loop": false
+	},
+	"jump-run-end": {
+		"loop": false
+	},
+	"breathe": {
+		"loop": true
+	},
+	"attack-fist_0": {
+		"loop": false
+	},
+	"run-start": {
+		"loop": false
+	}
+}

@@ -1,6 +1,7 @@
 var Matter = require("matter-js")
 var Sprite = require("./sprite")
 var Store = require("./store")
+var EventEmitter = require("events")
 var config = require("./config")
 var entitiesData = require("./entities.json")
 
@@ -21,8 +22,10 @@ var allOptions = {
 	controller: null
 }
 
-class Entity {
+class Entity extends EventEmitter {
 	constructor(asset, options) {
+		super()
+
 		var options = resolveOptions(options, allOptions)
 
 		var data = entitiesData[asset]
@@ -32,13 +35,30 @@ class Entity {
 		this.body = Matter.Bodies.rectangle(0, 0, this.width, this.height, {
 			inertia: Infinity
 		})
+		this.body.entity = this
 		this.x = 550
 		this.y = 0
 		Matter.Body.setStatic(this.body, options.static)
 		Matter.World.add(world.engine.world, this.body)
 		this.sprite.anchor.set(0.5, (this.sprite.height - this.height / 2) / this.sprite.height)
 		this.controller = options.controller
-		this.isTouchingGround = false
+		this.belowTouching = []
+		this.isGrounded = false
+
+		this.on("collisionStart", (entity, event) => {
+			if (this.x + this.width / 2 > entity.x - entity.width / 2 &&
+				this.x - this.width / 2 < entity.x + entity.width / 2 &&
+				this.y < entity.y) {
+				if (!this.belowTouching.includes(entity)) this.belowTouching.push(entity)
+				this.isGrounded = (this.belowTouching.length > 0)
+			}
+		})
+
+		this.on("collisionEnd", (entity, event) => {
+			var index = this.belowTouching.indexOf(entity)
+			if (index != -1) this.belowTouching.splice(index)
+			this.isGrounded = (this.belowTouching.length > 0)
+		})
 
 		if (config.debug) {
 			var graphics = new PIXI.Graphics()
@@ -53,6 +73,10 @@ class Entity {
 
 	move(input) {
 		var acceleration = config.player.speed * config.player.accelerationFactor
+		// if (!this.isGrounded) {
+		// 	input.left = false
+		// 	input.right = false
+		// }
 		if (input.left) this.vx -= acceleration
 		if (input.right) this.vx += acceleration
 		if (this.vx > config.player.speed) {
@@ -60,28 +84,49 @@ class Entity {
 		} else if (this.vx < -config.player.speed) {
 			this.vx = -config.player.speed
 		}
-		var yeet = 0.6
-		if (input.left || input.right) {
-			if (this.sprite.state != "run") this.sprite.state = "run-start"
-			setTimeout(() => {
-				if (this.sprite.state == "run-start") this.sprite.state = "run"
-			}, 83 * yeet)
-			var abs = Math.abs(this.sprite.scale.x)
-			if (input.right) {
-				this.sprite.scale.x = abs
+
+		if (this.isGrounded) {
+			var yeet = 0.6
+			if (input.left || input.right) {
+				if (this.sprite.state != "run") {
+					this.sprite.state = "run-start"
+					setTimeout(() => {
+						if (this.sprite.state == "run-start") this.sprite.state = "run"
+					}, 83 * yeet)
+				}
 			} else {
-				this.sprite.scale.x = -abs
+				if (this.sprite.state != "static") {
+					this.sprite.state = "run-start"
+					setTimeout(() => {
+						if (this.sprite.state == "run-start") this.sprite.state = "static"
+					}, 83 * yeet)
+				}
 			}
 		} else {
-			if (this.sprite.state != "static") this.sprite.state = "run-start"
-			setTimeout(() => {
-				if (this.sprite.state == "run-start") this.sprite.state = "static"
-			}, 83 * yeet)
+			if (Math.abs(this.vx) > 5) {
+				if (this.sprite.state == "run") {
+					this.sprite.state = "jump-run"
+				} else if (this.sprite.state != "jump-run") {
+					this.sprite.state = "jump-run-end"
+				}
+			} else {
+				if (this.sprite.state == "static") {
+					this.sprite.state = "jump-static"
+				} else if (this.sprite.state != "jump-static") {
+					this.sprite.state = "jump-static-end"
+				}
+			}
 		}
 
-		console.log(this.isTouchingGround)
-		if (input.jump && this.isTouchingGround) {
-			Matter.Body.applyForce(this.body, {x: 0, y: 0}, {x: 0, y: -0.1})
+		var abs = Math.abs(this.sprite.scale.x)
+		if (input.left) {
+			this.sprite.scale.x = -abs
+		} else if (input.right) {
+			this.sprite.scale.x = abs
+		}
+
+		if (input.jump && this.isGrounded) {
+			Matter.Body.applyForce(this.body, {x: 0, y: 0}, {x: 0, y: -0.6})
 		}
 	}
 

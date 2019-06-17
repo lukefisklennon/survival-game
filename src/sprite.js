@@ -1,3 +1,4 @@
+var animationsData = require("./animations")
 var config = require("./config")
 
 module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
@@ -43,6 +44,9 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 		if (this._state != state) {
 			this._state = state
 			this.textures = this.animations[this._state]
+			var loop = false
+			if (state in animationsData) loop = animationsData[state].loop
+			this.loop = loop
 			this.play()
 		}
 	}
