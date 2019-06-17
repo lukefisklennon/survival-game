@@ -102,21 +102,22 @@ class Entity extends EventEmitter {
 					}, 83 * yeet)
 				}
 			}
-		} else {
-			if (Math.abs(this.vx) > 5) {
-				if (this.sprite.state == "run") {
-					this.sprite.state = "jump-run"
-				} else if (this.sprite.state != "jump-run") {
-					this.sprite.state = "jump-run-end"
-				}
-			} else {
-				if (this.sprite.state == "static") {
-					this.sprite.state = "jump-static"
-				} else if (this.sprite.state != "jump-static") {
-					this.sprite.state = "jump-static-end"
-				}
-			}
 		}
+		// } else {
+		// 	if (Math.abs(this.vx) > 5) {
+		// 		if (this.sprite.state == "run") {
+		// 			this.sprite.state = "jump-run"
+		// 		} else if (this.sprite.state != "jump-run") {
+		// 			this.sprite.state = "jump-run-end"
+		// 		}
+		// 	} else {
+		// 		if (this.sprite.state == "static") {
+		// 			this.sprite.state = "jump-static"
+		// 		} else if (this.sprite.state != "jump-static") {
+		// 			this.sprite.state = "jump-static-end"
+		// 		}
+		// 	}
+		// }
 
 		var abs = Math.abs(this.sprite.scale.x)
 		if (input.left) {
