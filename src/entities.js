@@ -86,7 +86,7 @@ class Entity extends EventEmitter {
 		}
 
 		if (this.isGrounded) {
-			var yeet = 0.6
+			var yeet = 1
 			if (input.left || input.right) {
 				if (this.sprite.state != "run") {
 					this.sprite.state = "run-start"
