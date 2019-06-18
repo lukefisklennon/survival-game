@@ -8,13 +8,7 @@
 	"jump-static": {
 		"loop": false
 	},
-	"jump-static-end": {
-		"loop": false
-	},
 	"jump-run": {
-		"loop": false
-	},
-	"jump-run-end": {
 		"loop": false
 	},
 	"breathe": {

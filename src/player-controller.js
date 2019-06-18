@@ -2,10 +2,10 @@ var input = require("./input")
 
 module.exports = class PlayerController {
 	run(entity) {
-		entity.move({
-			left: input.a,
-			right: input.d,
-			jump: input.w
-		})
+		var x = 0
+		if (input.a) x -= 1
+		if (input.d) x += 1
+		entity.move(x)
+		if (input.w) entity.jump(1)
 	}
 }

@@ -11,21 +11,15 @@ module.exports = class World {
 		this.entities = new Entities()
 		this.environment = new Environment()
 
-		Matter.Events.on(this.engine, "collisionStart", event => {
-			event.pairs.forEach(pair => {
-				var a = pair.bodyA.entity
-				var b = pair.bodyB.entity
-				a.emit("collisionStart", b, pair)
-				b.emit("collisionStart", a, pair)
-			})
-		})
-
-		Matter.Events.on(this.engine, "collisionEnd", event => {
-			event.pairs.forEach(pair => {
-				var a = pair.bodyA.entity
-				var b = pair.bodyB.entity
-				a.emit("collisionEnd", b, pair)
-				b.emit("collisionEnd", a, pair)
+		var events = ["collisionStart", "collisionActive", "collisionEnd"]
+		events.forEach(name => {
+			Matter.Events.on(this.engine, name, event => {
+				event.pairs.forEach(pair => {
+					var a = pair.bodyA.entity
+					var b = pair.bodyB.entity
+					a.emit(name, b, pair)
+					b.emit(name, a, pair)
+				})
 			})
 		})
 	}
