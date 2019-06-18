@@ -21,8 +21,12 @@ load(() => {
 	player.y = 100
 	world.player = player
 
-	for (var i = 0; i < 20; i++) {
-		world.environment.terrain.emplaceRight(((i % 4 < 2) ? 500 : 0) + 500)// + Math.floor(Math.random() * 4) * config.scale)
+	for (var i = 0; i < 40; i++) {
+		// world.environment.terrain.emplaceRight(500)
+		var y = 500 + Math.floor(Math.random() * 40) * config.scale
+		for (var j = 0; j < 3; j++) {
+			world.environment.terrain.emplaceRight(y)
+		}
 	}
 
 	pixi.ticker.add(() => {

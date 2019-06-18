@@ -33,7 +33,8 @@ class Entity extends EventEmitter {
 		this.width = data.hitbox.width * config.scale
 		this.height = data.hitbox.height * config.scale
 		this.body = Matter.Bodies.rectangle(0, 0, this.width, this.height, {
-			inertia: Infinity
+			inertia: Infinity,
+			friction: 0
 		})
 		this.body.entity = this
 		this.x = 550
@@ -46,9 +47,7 @@ class Entity extends EventEmitter {
 		this.isGrounded = false
 
 		this.on("collisionStart", (entity, event) => {
-			if (this.x + this.width / 2 > entity.x - entity.width / 2 &&
-				this.x - this.width / 2 < entity.x + entity.width / 2 &&
-				this.y < entity.y) {
+			if (event.collision.normal.y < 0 && event.collision.normal.x == 0) {
 				if (!this.belowTouching.includes(entity)) this.belowTouching.push(entity)
 				this.isGrounded = (this.belowTouching.length > 0)
 			}
@@ -56,8 +55,10 @@ class Entity extends EventEmitter {
 
 		this.on("collisionEnd", (entity, event) => {
 			var index = this.belowTouching.indexOf(entity)
-			if (index != -1) this.belowTouching.splice(index)
-			this.isGrounded = (this.belowTouching.length > 0)
+			if (index != -1) {
+				this.belowTouching.splice(index, 1)
+				this.isGrounded = (this.belowTouching.length > 0)
+			}
 		})
 
 		if (config.debug) {
@@ -104,17 +105,9 @@ class Entity extends EventEmitter {
 			}
 		} else {
 			if (Math.abs(this.vx) > 5) {
-				if (this.sprite.state == "run") {
-					this.sprite.state = "jump-run"
-				} else if (this.sprite.state != "jump-run") {
-					this.sprite.state = "jump-run-end"
-				}
+				this.handleJumpState("run")
 			} else {
-				if (this.sprite.state == "static") {
-					this.sprite.state = "jump-static"
-				} else if (this.sprite.state != "jump-static") {
-					this.sprite.state = "jump-static-end"
-				}
+				this.handleJumpState("static")
 			}
 		}
 
@@ -130,21 +123,41 @@ class Entity extends EventEmitter {
 		}
 	}
 
+	handleJumpState(to) {
+		var from
+		if (to == "run") {
+			from = "static"
+		} else {
+			from = "run"
+		}
+		var oldState = this.sprite.state
+		var oldCurrentFrame = this.sprite.currentFrame
+		this.sprite.state = "jump-" + to
+		if (oldState == "jump-" + from) {
+			this.sprite.gotoAndPlay(oldCurrentFrame)
+		}
+	}
+
 	update() {
-		this.updateTouchingGround()
+		if (this.isGrounded) {
+			// if (this.vx > 0) {
+			// 	this.vx -= config.friction
+			// 	if (this.vx < 0) this.vx = 0
+			// } else if (this.vx < 0) {
+			// 	this.vx += config.friction
+			// 	if (this.vx > 0) this.vx = 0
+			// }
+			this.vx *= 1 - config.friction
+		}
 		this.sprite.x = this.x
 		this.sprite.y = this.y
-		this.sprite.rotation = this.body.angle
+		// this.sprite.rotation = this.body.angle
 		if (config.debug) {
 			this.debugBox.x = this.x
 			this.debugBox.y = this.y
 			this.debugBox.rotation = this.body.angle
 		}
 		if (this.controller) this.controller.run(this)
-	}
-
-	updateTouchingGround() {
-		this.touchingGround = false
 	}
 
 	get x() {
