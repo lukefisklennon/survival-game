@@ -2,7 +2,7 @@
 	"debug": false,
 	"scale": 7,
 	"deltaLimit": 100,
-	"cameraSpeed": 0.2,
+	"cameraSpeed": 0.15,
 	"terrainColumnWidth": 16,
 	"friction": 0.1,
 	"player": {

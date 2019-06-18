@@ -1,5 +1,6 @@
 var Store = require("./store")
 var Sprite = require("./sprite")
+var Entity = require("./entity")
 var config = require("./config")
 
 module.exports = class Environment {
@@ -33,7 +34,7 @@ class Column {
 	constructor(x, y) {
 		this.blocks = []
 		for (var i = 0; i < columnHeight; i++) {
-			var block = world.entities.emplace("ground-below", {
+			var block = world.entities.emplace(Entity, "ground-below", {
 				static: true
 			})
 			this.blocks.push(block)
