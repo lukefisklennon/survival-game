@@ -19,12 +19,11 @@ module.exports = class Entity extends EventEmitter {
 		this.sprite = new Sprite(asset)
 		this.width = data.hitbox.width * config.scale
 		this.height = data.hitbox.height * config.scale
-		this.sprite.anchor.set(0.5, (this.sprite.height - this.height / 2) / this.sprite.height)
+		this.sprite.anchor.set(0.5 + (config.scale * data.hitbox.x / this.sprite.width), (this.sprite.height - this.height / 2 + data.hitbox.y * config.scale) / this.sprite.height)
 
 		this.body = Matter.Bodies.rectangle(0, 0, this.width, this.height, {
 			inertia: Infinity,
-			friction: 0,
-			frictionAir: 0
+			friction: 0
 		})
 		this.body.entity = this
 		Matter.Body.setStatic(this.body, options.static)
@@ -38,8 +37,8 @@ module.exports = class Entity extends EventEmitter {
 		this.belowTouching = []
 		this.isGrounded = false
 		this.on("collisionStart", (entity, event) => {
-			if (event.collision.normal.y < 0 && event.collision.normal.x == 0) {
-				if (!this.belowTouching.includes(entity)) this.belowTouching.push(entity)
+			if (event.collision.normal.y < 0 && event.collision.normal.x == 0 && !this.belowTouching.includes(entity)) {
+				this.belowTouching.push(entity)
 				this.updateIsGrounded()
 			}
 		})
@@ -68,7 +67,7 @@ module.exports = class Entity extends EventEmitter {
 		}
 		this.sprite.x = this.x
 		this.sprite.y = this.y
-		// this.sprite.rotation = this.body.angle
+		this.sprite.rotation = this.body.angle
 		if (config.debug) {
 			this.debugBox.x = this.x
 			this.debugBox.y = this.y

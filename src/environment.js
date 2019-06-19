@@ -9,31 +9,29 @@ module.exports = class Environment {
 	}
 }
 
-var columnHeight = 10
-
 class Terrain extends Store {
 	constructor() {
-		super(Column)
+		super()
 		this.leftEdge = 0
 		this.rightEdge = 0
-		this.columnWidth = config.terrainColumnWidth * config.scale
+		this.blockSize = config.terrain.blockSize * config.scale
 	}
 
 	emplaceLeft(...args) {
-		this.add(this.create(this.leftEdge, ...args), 0)
-		this.leftEdge -= this.columnWidth
+		this.add(this.create(Column, this.leftEdge, ...args), 0)
+		this.leftEdge -= this.blockSize
 	}
 
 	emplaceRight(...args) {
-		this.add(this.create(this.rightEdge, ...args), this.list.length - 1)
-		this.rightEdge += this.columnWidth
+		this.add(this.create(Column, this.rightEdge, ...args), this.list.length - 1)
+		this.rightEdge += this.blockSize
 	}
 }
 
 class Column {
 	constructor(x, y) {
 		this.blocks = []
-		for (var i = 0; i < columnHeight; i++) {
+		for (var i = 0; i < config.terrain.columnHeight; i++) {
 			var block = world.entities.emplace(Entity, "ground-below", {
 				static: true
 			})

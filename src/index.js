@@ -22,7 +22,7 @@ load(() => {
 	player.y = 100
 	world.player = player
 
-	for (var i = 0; i < 40; i++) {
+	for (var i = 0; i < 10; i++) {
 		// world.environment.terrain.emplaceRight(500)
 		var y = 500 + Math.round(Math.random() * 20) * config.scale
 		for (var j = 0; j < 5; j++) {

@@ -1,11 +1,10 @@
 module.exports = class Store {
-	constructor(Class) {
-		this.Class = Class
+	constructor() {
 		this.list = []
 	}
 
-	create() {
-		return new this.Class(...arguments)
+	create(Class, ...args) {
+		return new Class(...args)
 	}
 
 	add(object, index) {
@@ -15,8 +14,8 @@ module.exports = class Store {
 		this.list.splice(index, 0, object)
 	}
 
-	emplace() {
-		var object = this.create(...arguments)
+	emplace(Class, ...args) {
+		var object = this.create(Class, ...args)
 		this.add(object)
 		return object
 	}

@@ -9,7 +9,7 @@ module.exports = class Humanoid extends Entity {
 
 	move(x) {
 		var speed = config.player.speed
-		if (!this.isGrounded) speed *= 0.5
+		if (!this.isGrounded) speed *= config.humanoid.airSpeed
 		var acceleration = speed * config.player.accelerationFactor
 
 		this.vx += x * acceleration
@@ -20,21 +20,10 @@ module.exports = class Humanoid extends Entity {
 		}
 
 		if (this.isGrounded) {
-			var yeet = 0.6
 			if (x != 0) {
-				if (this.sprite.state != "run") {
-					this.sprite.state = "run-start"
-					setTimeout(() => {
-						if (this.sprite.state == "run-start") this.sprite.state = "run"
-					}, 83 * yeet)
-				}
+				this.handleRunTransition("run")
 			} else {
-				if (this.sprite.state != "static") {
-					this.sprite.state = "run-start"
-					setTimeout(() => {
-						if (this.sprite.state == "run-start") this.sprite.state = "static"
-					}, 83 * yeet)
-				}
+				this.handleRunTransition("static")
 			}
 		} else {
 			if (Math.abs(this.vx) > 5) {
@@ -54,9 +43,18 @@ module.exports = class Humanoid extends Entity {
 
 	jump(power) {
 		if (this.isGrounded) {
-			Matter.Body.applyForce(this.body, {x: 0, y: 0}, {x: 0, y: -0.6 * power})
+			this.vy = -10 * power
 			this.belowTouching = []
 			this.updateIsGrounded()
+		}
+	}
+
+	handleRunTransition(to) {
+		if (this.sprite.state != to) {
+			this.sprite.state = "run-start"
+			setTimeout(() => {
+				if (this.sprite.state == "run-start") this.sprite.state = to
+			}, 83 * config.humanoid.runTransitionFactor)
 		}
 	}
 

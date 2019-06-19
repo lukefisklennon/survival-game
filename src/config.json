@@ -3,10 +3,17 @@
 	"scale": 7,
 	"deltaLimit": 100,
 	"cameraSpeed": 0.15,
-	"terrainColumnWidth": 16,
 	"friction": 0.1,
 	"player": {
 		"speed": 10,
 		"accelerationFactor": 0.5
+	},
+	"humanoid": {
+		"airSpeed": 0.5
+		"runTransitionFactor": 0.6
+	},
+	"terrain": {
+		"blockSize": 16,
+		"columnHeight": 5
 	}
 }
