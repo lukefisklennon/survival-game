@@ -1,5 +1,6 @@
-{ "frames": {
-   "thaumaturge2 0.aseprite": {
+{ "frames": [
+   {
+    "filename": "thaumaturge2 0.aseprite",
     "frame": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -7,7 +8,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 1.aseprite": {
+   {
+    "filename": "thaumaturge2 1.aseprite",
     "frame": { "x": 40, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -15,7 +17,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 2.aseprite": {
+   {
+    "filename": "thaumaturge2 2.aseprite",
     "frame": { "x": 80, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -23,7 +26,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 3.aseprite": {
+   {
+    "filename": "thaumaturge2 3.aseprite",
     "frame": { "x": 120, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -31,7 +35,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 4.aseprite": {
+   {
+    "filename": "thaumaturge2 4.aseprite",
     "frame": { "x": 160, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -39,7 +44,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 5.aseprite": {
+   {
+    "filename": "thaumaturge2 5.aseprite",
     "frame": { "x": 200, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -47,7 +53,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 6.aseprite": {
+   {
+    "filename": "thaumaturge2 6.aseprite",
     "frame": { "x": 240, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -55,7 +62,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 7.aseprite": {
+   {
+    "filename": "thaumaturge2 7.aseprite",
     "frame": { "x": 280, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -63,7 +71,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 8.aseprite": {
+   {
+    "filename": "thaumaturge2 8.aseprite",
     "frame": { "x": 320, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -71,7 +80,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 9.aseprite": {
+   {
+    "filename": "thaumaturge2 9.aseprite",
     "frame": { "x": 360, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -79,7 +89,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 10.aseprite": {
+   {
+    "filename": "thaumaturge2 10.aseprite",
     "frame": { "x": 400, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -87,7 +98,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 11.aseprite": {
+   {
+    "filename": "thaumaturge2 11.aseprite",
     "frame": { "x": 440, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -95,7 +107,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 12.aseprite": {
+   {
+    "filename": "thaumaturge2 12.aseprite",
     "frame": { "x": 480, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -103,7 +116,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 13.aseprite": {
+   {
+    "filename": "thaumaturge2 13.aseprite",
     "frame": { "x": 520, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -111,7 +125,8 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    },
-   "thaumaturge2 14.aseprite": {
+   {
+    "filename": "thaumaturge2 14.aseprite",
     "frame": { "x": 560, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
@@ -119,7 +134,7 @@
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
    }
- },
+ ],
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.12.1-x64",
