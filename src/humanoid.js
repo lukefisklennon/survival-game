@@ -43,7 +43,6 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	setMovement(speed, accelerationFactor) {
-		console.log(this.vx, speed * accelerationFactor)
 		this.vx += speed * accelerationFactor
 		if ((speed > 0 && this.vx > speed) || (speed < 0 && this.vx < speed)) {
 			this.vx = speed
@@ -62,8 +61,8 @@ module.exports = class Humanoid extends Entity {
 		if (!this.isAttacking) this.attackDirection = direction
 		this.isAttacking = true
 		this.sprite.state = "attack-fist_0"
-		this.sprite.onComplete = function() {
-			if (this.isAttacking) {
+		this.sprite.onFrameChange = function(frame) {
+			if (this.isAttacking && frame > 3) {
 				this.sprite.state = "static"
 				this.isAttacking = false
 			}
