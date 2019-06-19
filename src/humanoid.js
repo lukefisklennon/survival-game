@@ -5,48 +5,69 @@ var config = require("./config")
 module.exports = class Humanoid extends Entity {
 	constructor() {
 		super(...arguments)
+
+		this.isAttacking = false
+		this.attackDirection = 0
+	}
+
+	update() {
+		if (this.isAttacking) {
+			this.direction = this.attackDirection
+			this.setMovement(this.attackDirection * config.player.speed * config.humanoid.attackSpeedFactor, config.player.accelerationFactor)
+		}
+		super.update()
 	}
 
 	move(x) {
-		var speed = config.player.speed
-		if (!this.isGrounded) speed *= config.humanoid.airSpeed
-		var acceleration = speed * config.player.accelerationFactor
+		if (!this.isAttacking) {
+			var accelerationFactor = config.player.accelerationFactor
+			if (!this.isGrounded) accelerationFactor *= config.humanoid.airAccelerationFactor
+			this.setMovement(x * config.player.speed, accelerationFactor)
 
-		this.vx += x * acceleration
-		if (this.vx > config.player.speed) {
-			this.vx = config.player.speed
-		} else if (this.vx < -config.player.speed) {
-			this.vx = -config.player.speed
-		}
-
-		if (this.isGrounded) {
-			if (x != 0) {
-				this.handleRunTransition("run")
+			if (this.isGrounded) {
+				if (x != 0) {
+					this.handleRunTransition("run")
+				} else {
+					this.handleRunTransition("static")
+				}
 			} else {
-				this.handleRunTransition("static")
+				if (Math.abs(this.vx) > 5) {
+					this.handleJumpState("run")
+				} else {
+					this.handleJumpState("static")
+				}
 			}
-		} else {
-			if (Math.abs(this.vx) > 5) {
-				this.handleJumpState("run")
-			} else {
-				this.handleJumpState("static")
-			}
-		}
 
-		var abs = Math.abs(this.sprite.scale.x)
-		if (x > 0) {
-			this.sprite.scale.x = abs
-		} else if (x < 0) {
-			this.sprite.scale.x = -abs
+			this.direction = x
+		}
+	}
+
+	setMovement(speed, accelerationFactor) {
+		console.log(this.vx, speed * accelerationFactor)
+		this.vx += speed * accelerationFactor
+		if ((speed > 0 && this.vx > speed) || (speed < 0 && this.vx < speed)) {
+			this.vx = speed
 		}
 	}
 
 	jump(power) {
-		if (this.isGrounded) {
+		if (this.isGrounded && !this.isAttacking) {
 			this.vy = -10 * power
 			this.belowTouching = []
 			this.updateIsGrounded()
 		}
+	}
+
+	attack(direction) {
+		if (!this.isAttacking) this.attackDirection = direction
+		this.isAttacking = true
+		this.sprite.state = "attack-fist_0"
+		this.sprite.onComplete = function() {
+			if (this.isAttacking) {
+				this.sprite.state = "static"
+				this.isAttacking = false
+			}
+		}.bind(this)
 	}
 
 	handleRunTransition(to) {

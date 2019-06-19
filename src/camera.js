@@ -2,6 +2,7 @@ var config = require("./config")
 
 module.exports = class Camera {
 	constructor() {
+		this.screenTarget = {x: window.innerWidth / 2, y: window.innerHeight / 2}
 		this.container = new PIXI.Container()
 		pixi.stage.addChild(this.container)
 	}
@@ -11,19 +12,33 @@ module.exports = class Camera {
 	}
 
 	update() {
-		this.x = world.player.x
-		this.y = world.player.y
+		this.follow(world.player.x, world.player.y)
 	}
 
-	set x(x) {
-		this.container.x = this.transition(this.container.x, -x + window.innerWidth / 2)
-	}
-
-	set y(y) {
-		this.container.y = this.transition(this.container.y, -y + window.innerHeight / 2)
+	follow(x, y) {
+		this.x = this.transition(this.x, x)
+		this.y = this.transition(this.y, y)
+		this.screenTarget.x = x - this.x + window.innerWidth / 2
+		this.screenTarget.y = y + this.y + window.innerHeight / 2
 	}
 
 	transition(current, target) {
 		return (current * (1 - config.cameraSpeed)) + (target * config.cameraSpeed)
+	}
+
+	get x() {
+		return -(this.container.x - window.innerWidth / 2)
+	}
+
+	get y() {
+		return -(this.container.y - window.innerHeight / 2)
+	}
+
+	set x(x) {
+		this.container.x = -x + window.innerWidth / 2
+	}
+
+	set y(y) {
+		this.container.y = -y + window.innerHeight / 2
 	}
 }

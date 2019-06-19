@@ -1,25 +1,28 @@
 var Matter = require("matter-js")
 var Sprite = require("./sprite")
+var Util = require("./util")
 var EventEmitter = require("events")
 var config = require("./config")
 var entitiesData = require("./entities.json")
 
 var allOptions = {
-	static: false,
-	controller: null
+	asset: null,
+	controller: null,
+	static: false
 }
 
 module.exports = class Entity extends EventEmitter {
-	constructor(asset, options) {
+	constructor(options) {
 		super()
 
-		var options = resolveOptions(options, allOptions)
+		var options = Util.resolveOptions(options, allOptions)
 
-		var data = entitiesData[asset]
-		this.sprite = new Sprite(asset)
+		var data = entitiesData[options.asset]
+		this.sprite = new Sprite(options.asset)
 		this.width = data.hitbox.width * config.scale
 		this.height = data.hitbox.height * config.scale
 		this.sprite.anchor.set(0.5 + (config.scale * data.hitbox.x / this.sprite.width), (this.sprite.height - this.height / 2 + data.hitbox.y * config.scale) / this.sprite.height)
+		this.direction = 1
 
 		this.body = Matter.Bodies.rectangle(0, 0, this.width, this.height, {
 			inertia: Infinity,
@@ -111,16 +114,17 @@ module.exports = class Entity extends EventEmitter {
 	set vy(vy) {
 		Matter.Body.setVelocity(this.body, {x: this.body.velocity.x, y: vy})
 	}
-}
 
-function resolveOptions(options, allOptions) {
-	if (typeof(options) == "undefined") {
-		options = {}
+	get direction() {
+		return Math.signum(this.sprite.scale.x)
 	}
-	for (key in allOptions) {
-		if (!(key in options)) {
-			options[key] = allOptions[key]
+
+	set direction(direction) {
+		var abs = Math.abs(this.sprite.scale.x)
+		if (direction > 0) {
+			this.sprite.scale.x = abs
+		} else if (direction < 0) {
+			this.sprite.scale.x = -abs
 		}
 	}
-	return options
 }

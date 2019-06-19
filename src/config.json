@@ -9,7 +9,8 @@
 		"accelerationFactor": 0.5
 	},
 	"humanoid": {
-		"airSpeed": 0.5
+		"airAccelerationFactor": 0.5,
+		"attackSpeedFactor": 0.5,
 		"runTransitionFactor": 0.6
 	},
 	"terrain": {

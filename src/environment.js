@@ -32,7 +32,8 @@ class Column {
 	constructor(x, y) {
 		this.blocks = []
 		for (var i = 0; i < config.terrain.columnHeight; i++) {
-			var block = world.entities.emplace(Entity, "ground-below", {
+			var block = world.entities.emplace(Entity, {
+				asset: "ground-below",
 				static: true
 			})
 			this.blocks.push(block)
