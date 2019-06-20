@@ -160,6 +160,15 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 18.aseprite",
+    "frame": { "x": 720, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
    }
  ],
  "meta": {
@@ -167,7 +176,7 @@
   "version": "1.2.12.1-x64",
   "image": "thaumaturge.png",
   "format": "RGBA8888",
-  "size": { "w": 720, "h": 40 },
+  "size": { "w": 760, "h": 40 },
   "scale": "1",
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
@@ -175,7 +184,7 @@
    { "name": "run-start", "from": 9, "to": 9, "direction": "forward" },
    { "name": "jump-static", "from": 10, "to": 11, "direction": "forward" },
    { "name": "jump-run", "from": 12, "to": 13, "direction": "forward" },
-   { "name": "attack-fists_0", "from": 14, "to": 17, "direction": "forward" }
+   { "name": "attack-fists_0", "from": 14, "to": 18, "direction": "forward" }
   ]
  }
 }
