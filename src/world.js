@@ -6,6 +6,8 @@ var config = require("./config")
 
 module.exports = class World {
 	constructor() {
+		this.yeet = false
+		
 		this.engine = Matter.Engine.create()
 		this.camera = new Camera()
 		this.entities = new Entities()

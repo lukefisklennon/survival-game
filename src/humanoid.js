@@ -13,7 +13,7 @@ module.exports = class Humanoid extends Entity {
 	update() {
 		if (this.isAttacking) {
 			this.direction = this.attackDirection
-			this.setMovement(this.attackDirection * config.player.speed * config.humanoid.attackSpeedFactor, config.player.accelerationFactor)
+			if (!world.yeet) this.setMovement(this.attackDirection * config.player.speed * config.humanoid.attackSpeedFactor, config.player.accelerationFactor)
 		}
 		super.update()
 	}
@@ -51,16 +51,19 @@ module.exports = class Humanoid extends Entity {
 
 	jump(power) {
 		if (this.isGrounded && !this.isAttacking) {
-			this.vy = -10 * power
+			this.vy = -config.player.jumpPower * power
 			this.belowTouching = []
 			this.updateIsGrounded()
 		}
 	}
 
 	attack(direction) {
-		if (!this.isAttacking) this.attackDirection = direction
+		if (!this.isAttacking) {
+			this.attackDirection = direction
+			if (world.yeet) this.vx = 15 * direction
+		}
 		this.isAttacking = true
-		this.sprite.state = "attack-fist_0"
+		this.sprite.state = "attack-fists_0"
 		this.sprite.onFrameChange = function(frame) {
 			if (this.isAttacking && frame > 3) {
 				this.sprite.state = "static"

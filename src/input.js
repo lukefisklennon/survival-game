@@ -9,6 +9,9 @@ module.exports = new class Input {
 		}
 		window.onkeyup = event => {
 			this.setKey(event.key, false)
+			if (event.key == "Shift") {
+				world.yeet = !world.yeet
+			}
 		}
 
 		this.leftMouse = false
@@ -24,6 +27,7 @@ module.exports = new class Input {
 			this.mouse.x = event.clientX
 			this.mouse.y = event.clientY
 		}
+		window.oncontextmenu = () => false
 	}
 
 	setKey(name, state) {
