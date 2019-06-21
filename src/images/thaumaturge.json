@@ -184,7 +184,7 @@
    { "name": "run-start", "from": 9, "to": 9, "direction": "forward" },
    { "name": "jump-static", "from": 10, "to": 11, "direction": "forward" },
    { "name": "jump-run", "from": 12, "to": 13, "direction": "forward" },
-   { "name": "attack-fists_0", "from": 14, "to": 18, "direction": "forward" }
+   { "name": "attack-fist_0", "from": 14, "to": 18, "direction": "forward" }
   ]
  }
 }
