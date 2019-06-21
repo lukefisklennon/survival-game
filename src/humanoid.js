@@ -63,7 +63,7 @@ module.exports = class Humanoid extends Entity {
 			if (world.yeet) this.vx = 15 * direction
 		}
 		this.isAttacking = true
-		this.sprite.state = "attack-fists_0"
+		this.sprite.state = "attack-fist_0"
 		this.sprite.onFrameChange = function(frame) {
 			if (this.isAttacking && frame > 3) {
 				this.sprite.state = "static"
