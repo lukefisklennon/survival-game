@@ -7,6 +7,10 @@ var entitiesData = require("./entities.json")
 
 var allOptions = {
 	asset: null,
+	x: 0,
+	y: 0,
+	width: 0,
+	height: 0,
 	controller: null,
 	static: false
 }
@@ -17,30 +21,32 @@ module.exports = class Entity extends EventEmitter {
 
 		var options = Util.resolveOptions(options, allOptions)
 
-		var data = entitiesData[options.asset]
-		this.sprite = new Sprite(options.asset)
-		this.width = data.hitbox.width * config.scale
-		this.height = data.hitbox.height * config.scale
-		this.sprite.anchor.set(0.5 + (config.scale * data.hitbox.x / this.sprite.width), (this.sprite.height - this.height / 2 + data.hitbox.y * config.scale) / this.sprite.height)
-		this.direction = 1
+		if (options.asset) {
+			var data = entitiesData[options.asset]
+			this.sprite = new Sprite(options.asset)
+			this.width = data.hitbox.width * config.scale
+			this.height = data.hitbox.height * config.scale
+			this.sprite.anchor.set(0.5 + (config.scale * data.hitbox.x / this.sprite.width), (this.sprite.height - this.height / 2 + data.hitbox.y * config.scale) / this.sprite.height)
+			this.direction = 1
+		} else {
+			this.width = options.width
+			this.height = options.height
+		}
 
-		this.body = Matter.Bodies.rectangle(0, 0, this.width, this.height, {
+		this.body = Matter.Bodies.rectangle(options.x, options.y, this.width, this.height, {
 			inertia: Infinity,
-			friction: 0
+			friction: 0,
+			isStatic: options.static
 		})
 		this.body.entity = this
-		Matter.Body.setStatic(this.body, options.static)
 		Matter.World.add(world.engine.world, this.body)
 
 		this.controller = options.controller
 
-		this.x = 550
-		this.y = 0
-
 		this.belowTouching = []
 		this.isGrounded = false
 		this.on("collisionStart", (entity, event) => {
-			if (event.collision.normal.y < 0 && event.collision.normal.x == 0 && !this.belowTouching.includes(entity)) {
+			if (event.collision.normal.y > 0 && event.collision.normal.x == 0 && !this.belowTouching.includes(entity)) {
 				this.belowTouching.push(entity)
 				this.updateIsGrounded()
 			}
@@ -68,9 +74,11 @@ module.exports = class Entity extends EventEmitter {
 		if (this.isGrounded) {
 			this.vx *= 1 - config.friction
 		}
-		this.sprite.x = this.x
-		this.sprite.y = this.y
-		this.sprite.rotation = this.body.angle
+		if (this.sprite) {
+			this.sprite.x = this.x
+			this.sprite.y = this.y
+		}
+		// this.sprite.rotation = this.body.angle
 		if (config.debug) {
 			this.debugBox.x = this.x
 			this.debugBox.y = this.y
@@ -116,15 +124,17 @@ module.exports = class Entity extends EventEmitter {
 	}
 
 	get direction() {
-		return Math.signum(this.sprite.scale.x)
+		if (this.sprite) return Math.sign(this.sprite.scale.x)
 	}
 
 	set direction(direction) {
-		var abs = Math.abs(this.sprite.scale.x)
-		if (direction > 0) {
-			this.sprite.scale.x = abs
-		} else if (direction < 0) {
-			this.sprite.scale.x = -abs
+		if (this.sprite) {
+			var abs = Math.abs(this.sprite.scale.x)
+			if (direction > 0) {
+				this.sprite.scale.x = abs
+			} else if (direction < 0) {
+				this.sprite.scale.x = -abs
+			}
 		}
 	}
 }

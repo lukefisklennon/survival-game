@@ -4,11 +4,12 @@ module.exports = class Camera {
 	constructor() {
 		this.screenTarget = {x: window.innerWidth / 2, y: window.innerHeight / 2}
 		this.container = new PIXI.Container()
+		// this.container.sortableChildren = true
 		pixi.stage.addChild(this.container)
 	}
 
 	add(child) {
-		this.container.addChild(child)
+		this.container.addChildAt(child, 0)
 	}
 
 	update() {

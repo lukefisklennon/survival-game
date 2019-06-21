@@ -10,4 +10,12 @@ module.exports = class Util {
 		}
 		return options
 	}
+
+	static imagePath(asset) {
+		return require("./images/" + asset + ".png")
+	}
+
+	static imageData(asset) {
+		return require("./images/" + asset + ".json")
+	}
 }

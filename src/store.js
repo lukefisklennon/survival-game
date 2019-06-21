@@ -9,7 +9,7 @@ module.exports = class Store {
 
 	add(object, index) {
 		if (arguments.length < 2) {
-			index = this.list.length - 1
+			index = this.length - 1
 		}
 		this.list.splice(index, 0, object)
 	}

@@ -1,10 +1,10 @@
 {
 	"thaumaturge": {
 		"hitbox": {
-			"x": 0.5,
+			"x": -0.5,
 			"y": 0,
 			"width": 11,
-			"height": 31
+			"height": 33
 		}
 	},
 	"ground-below": {

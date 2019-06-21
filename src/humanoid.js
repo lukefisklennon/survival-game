@@ -52,7 +52,7 @@ module.exports = class Humanoid extends Entity {
 	jump(power) {
 		if (this.isGrounded && !this.isAttacking) {
 			this.vy = -config.player.jumpPower * power
-			this.belowTouching = []
+			// this.belowTouching = []
 			this.updateIsGrounded()
 		}
 	}

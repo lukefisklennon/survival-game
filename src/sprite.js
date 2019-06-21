@@ -1,12 +1,12 @@
+var Util = require("./util")
 var animationsData = require("./animations")
 var config = require("./config")
 
 module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 	constructor(asset) {
 		var animations = {}
-		var base = "./images/" + asset
-		var image = require(base + ".png")
-		var data = require(base + ".json")
+		var image = Util.imagePath(asset)
+		var data = Util.imageData(asset)
 		var texture = PIXI.Texture.from(image)
 		var frameTags = data.meta.frameTags
 		if (frameTags.length == 0) {

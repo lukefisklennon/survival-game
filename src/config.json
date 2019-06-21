@@ -1,7 +1,7 @@
 {
 	"debug": false,
 	"scale": 7,
-	"deltaLimit": 100,
+	"deltaLimit": 1000,
 	"cameraSpeed": 0.15,
 	"friction": 0.1,
 	"player": {
@@ -15,7 +15,6 @@
 		"runTransitionFactor": 0.6
 	},
 	"terrain": {
-		"blockSize": 16,
 		"columnHeight": 5
 	}
 }
