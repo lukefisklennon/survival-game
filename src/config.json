@@ -7,7 +7,7 @@
 	"player": {
 		"speed": 10,
 		"accelerationFactor": 0.5,
-		"jumpPower": 10
+		"jumpPower": 12
 	},
 	"humanoid": {
 		"airAccelerationFactor": 0.5,
