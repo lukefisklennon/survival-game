@@ -19,8 +19,8 @@
 		"stepHeight": 16,
 		"octaves": [
 			{
-				"frequency": 0.01,
-				"amplitude": 300
+				"frequency": 0.05,
+				"amplitude": 100
 			}
 		]
 	}
