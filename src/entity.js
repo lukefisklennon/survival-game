@@ -46,7 +46,7 @@ module.exports = class Entity extends EventEmitter {
 		this.belowTouching = []
 		this.isGrounded = false
 		this.on("collisionStart", (entity, event) => {
-			if (event.collision.normal.y > 0 && event.collision.normal.x == 0 && !this.belowTouching.includes(entity)) {
+			if (event.collision.normal.y < 0 && event.collision.normal.x == 0 && !this.belowTouching.includes(entity)) {
 				this.belowTouching.push(entity)
 				this.updateIsGrounded()
 			}

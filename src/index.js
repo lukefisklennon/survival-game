@@ -23,30 +23,41 @@ load(() => {
 	// 	e[i].y = 100
 	// }
 
-	for (var i = 0; i < 20; i++) {
-		// world.environment.terrain.emplaceRight(500)
-		var y = 500 + Math.round(Math.random() * 22) * config.scale
-		for (var j = 0; j < 5; j++) {
-			world.environment.terrain.emplaceRight(y)
-		}
+	world.player = world.entities.emplace(Humanoid, {
+		asset: "thaumaturge",
+		x: 0,
+		y: 0,
+		controller: new PlayerController()
+	})
+
+	var SimplexNoise = require("simplex-noise")
+	var simplex = new SimplexNoise()
+
+	function thing(i) {
+		var y = 0
+		config.terrain.octaves.forEach(octave => {
+			y += Math.round((simplex.noise2D(i * octave.frequency, 16) * 0.5 + 0.5) * octave.amplitude)
+		})
+		y = Math.round(y / config.terrain.stepHeight) * config.terrain.stepHeight
+		world.environment.terrain.emplaceRight(y)
 	}
 
-	setTimeout(() => {
-		var player = world.entities.emplace(Humanoid, {
-			asset: "thaumaturge",
-			x: 620,
-			y: 200,
-			controller: new PlayerController()
-		})
-		// player.sprite.zIndex = -1
-		world.player = player
+	var numAhead = 5
 
+	for (var i = 0; i < numAhead; i++) {
+		thing(world.environment.terrain.length)
+	}
+
+	// setTimeout(() => {
 		pixi.ticker.add(() => {
 			// for (var i = 0; i < e.length; i++) {
 			// 	e[i].move((i % 2) * 2 - 1)
 			// 	if (Math.random() < 0.001) e[i].jump(1)
 			// }
+			if (world.player.x > (world.environment.terrain.length - numAhead) * 16 * config.scale) {
+				thing(world.environment.terrain.length)
+			}
 			world.update(pixi.ticker.elapsedMS)
 		})
-	}, 1)
+	// }, 1)
 })

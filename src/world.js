@@ -6,8 +6,6 @@ var config = require("./config")
 
 module.exports = class World {
 	constructor() {
-		this.yeet = false
-
 		this.engine = Matter.Engine.create()
 		this.camera = new Camera()
 		this.entities = new Entities()
@@ -28,7 +26,7 @@ module.exports = class World {
 
 	update(delta) {
 		if (delta > config.deltaLimit) delta = config.deltaLimit
-		Matter.Engine.update(world.engine, delta) // TODO: jump height changes depending on delta
+		Matter.Engine.update(world.engine, delta)
 		this.entities.update()
 		this.camera.update()
 	}

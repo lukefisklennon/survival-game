@@ -26,6 +26,7 @@
   "homepage": "https://github.com/iONinja/survival-game#readme",
   "dependencies": {
     "matter-js": "^0.14.2",
-    "pixi.js": "^4.8.8"
+    "pixi.js": "^4.8.8",
+    "simplex-noise": "^2.4.0"
   }
 }

@@ -18,7 +18,6 @@ class Terrain extends Store {
 		super()
 		this.leftEdge = 0
 		this.rightEdge = 0
-
 	}
 
 	emplaceLeft(...args) {
@@ -35,6 +34,7 @@ class Terrain extends Store {
 class Column {
 	constructor(x, y) {
 		// this.blocks = []
+		y *= config.scale
 		this.entity = world.entities.emplace(Entity, {
 			asset: null,
 			x: x,
@@ -48,13 +48,13 @@ class Column {
 		// this.sprite.x = x - blockSize / 2
 		// this.sprite.y = y
 		// world.camera.add(this.sprite)
-		this.surface = new Sprite("ground-surface")
-		this.surface.x = x
-		this.surface.y = y
 		for (var i = 0; i < config.terrain.columnHeight; i++) {
 			var block = new Sprite("ground-below")
 			block.x = x
 			block.y = y + blockSize / 2 + i * blockSize
 		}
+		this.surface = new Sprite("ground-surface")
+		this.surface.x = x
+		this.surface.y = y
 	}
 }

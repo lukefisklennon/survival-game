@@ -10,14 +10,6 @@ module.exports = class Humanoid extends Entity {
 		this.attackDirection = 0
 	}
 
-	update() {
-		if (this.isAttacking) {
-			this.direction = this.attackDirection
-			if (!world.yeet) this.setMovement(this.attackDirection * config.player.speed * config.humanoid.attackSpeedFactor, config.player.accelerationFactor)
-		}
-		super.update()
-	}
-
 	move(x) {
 		if (!this.isAttacking) {
 			var accelerationFactor = config.player.accelerationFactor
@@ -59,8 +51,8 @@ module.exports = class Humanoid extends Entity {
 
 	attack(direction) {
 		if (!this.isAttacking) {
-			this.attackDirection = direction
-			if (world.yeet) this.vx = 15 * direction
+			this.direction = direction
+			this.vx = 15 * direction
 		}
 		this.isAttacking = true
 		this.sprite.state = "attack-fist_0"

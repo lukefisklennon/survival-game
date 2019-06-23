@@ -9,7 +9,7 @@ module.exports = class Camera {
 	}
 
 	add(child) {
-		this.container.addChildAt(child, 0)
+		this.container.addChild/*At*/(child)//, 0)
 	}
 
 	update() {
