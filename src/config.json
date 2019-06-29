@@ -3,6 +3,7 @@
 	"scale": 7,
 	"deltaLimit": 100,
 	"cameraSpeed": 0.15,
+	"fov": 1000,
 	"friction": 0.1,
 	"player": {
 		"speed": 10,
@@ -19,7 +20,7 @@
 		"stepHeight": 16,
 		"octaves": [
 			{
-				"frequency": 0.05,
+				"wavelength": 20,
 				"amplitude": 100
 			}
 		]
