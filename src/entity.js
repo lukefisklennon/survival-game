@@ -70,6 +70,11 @@ module.exports = class Entity extends EventEmitter {
 		}
 	}
 
+	destroy() {
+		Matter.Composite.remove(world.engine.world, this.body)
+		world.camera.remove(this.sprite)
+	}
+
 	update() {
 		if (this.isGrounded) {
 			this.vx *= 1 - config.friction

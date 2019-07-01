@@ -6,9 +6,11 @@ var config = require("./config")
 
 module.exports = class World {
 	constructor() {
+		window.world = this
+
 		this.engine = Matter.Engine.create()
-		this.camera = new Camera()
 		this.entities = new Entities()
+		this.camera = new Camera(0, 0)
 		this.environment = new Environment()
 
 		var events = ["collisionStart", "collisionActive", "collisionEnd"]
@@ -27,6 +29,7 @@ module.exports = class World {
 	update(delta) {
 		if (delta > config.deltaLimit) delta = config.deltaLimit
 		Matter.Engine.update(world.engine, delta)
+		this.environment.update()
 		this.entities.update()
 		this.camera.update()
 	}
