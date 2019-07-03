@@ -1,6 +1,6 @@
 { "frames": [
    {
-    "filename": "environment-sprites 0.aseprite",
+    "filename": "trees-grassland 0.aseprite",
     "frame": { "x": 0, "y": 0, "w": 64, "h": 64 },
     "rotated": false,
     "trimmed": false,
@@ -9,7 +9,7 @@
     "duration": 100
    },
    {
-    "filename": "environment-sprites 1.aseprite",
+    "filename": "trees-grassland 1.aseprite",
     "frame": { "x": 64, "y": 0, "w": 64, "h": 64 },
     "rotated": false,
     "trimmed": false,
@@ -21,7 +21,7 @@
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.12.1-x64",
-  "image": "environment-sprites.png",
+  "image": "trees-grassland.png",
   "format": "RGBA8888",
   "size": { "w": 128, "h": 64 },
   "scale": "1",
