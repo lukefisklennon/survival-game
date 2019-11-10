@@ -1,5 +1,6 @@
-{ "frames": {
-   "ground-surface 0.aseprite": {
+{ "frames": [
+   {
+    "filename": "ground-surface 0.aseprite",
     "frame": { "x": 0, "y": 0, "w": 16, "h": 32 },
     "rotated": false,
     "trimmed": false,
@@ -7,7 +8,8 @@
     "sourceSize": { "w": 16, "h": 32 },
     "duration": 100
    },
-   "ground-surface 1.aseprite": {
+   {
+    "filename": "ground-surface 1.aseprite",
     "frame": { "x": 16, "y": 0, "w": 16, "h": 32 },
     "rotated": false,
     "trimmed": false,
@@ -15,7 +17,7 @@
     "sourceSize": { "w": 16, "h": 32 },
     "duration": 100
    }
- },
+ ],
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.15-x64",
