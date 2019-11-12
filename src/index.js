@@ -14,7 +14,7 @@ require("./setup")()
 load(() => {
 	new World()
 
-	world.player = world.entities.emplace(Humanoid, {
+	world.player = new Humanoid({
 		asset: "thaumaturge",
 		x: 0,
 		y: 0,

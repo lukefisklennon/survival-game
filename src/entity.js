@@ -12,12 +12,17 @@ var allOptions = {
 	width: 0,
 	height: 0,
 	controller: null,
-	static: false
+	static: false,
+	collisionFilter: {
+		category: 1,
+		mask: 1
+	}
 }
 
 module.exports = class Entity extends EventEmitter {
 	constructor(options) {
 		super()
+		world.entities.add(this)
 
 		var options = Util.resolveOptions(options, allOptions)
 
@@ -36,7 +41,8 @@ module.exports = class Entity extends EventEmitter {
 		this.body = Matter.Bodies.rectangle(options.x, options.y, this.width, this.height, {
 			inertia: Infinity,
 			friction: 0,
-			isStatic: options.static
+			isStatic: options.static,
+			collisionFilter: options.collisionFilter
 		})
 		this.body.entity = this
 		Matter.World.add(world.engine.world, this.body)
@@ -46,7 +52,7 @@ module.exports = class Entity extends EventEmitter {
 		this.belowTouching = []
 		this.isGrounded = false
 		this.on("collisionStart", (entity, event) => {
-			if (event.collision.normal.y < 0 && event.collision.normal.x == 0 && !this.belowTouching.includes(entity)) {
+			if (this.y < entity.y &&/*event.collision.normal.y > 0 && event.collision.normal.x == 0 &&*/ !this.belowTouching.includes(entity)) {
 				this.belowTouching.push(entity)
 				this.updateIsGrounded()
 			}
@@ -73,11 +79,22 @@ module.exports = class Entity extends EventEmitter {
 	destroy() {
 		Matter.Composite.remove(world.engine.world, this.body)
 		world.camera.remove(this.sprite)
+		if (config.debug) {
+			world.camera.remove(this.debugBox)
+		}
 	}
 
 	update() {
 		if (this.isGrounded) {
 			this.vx *= 1 - config.friction
+		}
+		if (this.constructor.name == "Humanoid") {
+			console.log(this.belowTouching.filter(entity => entity.constructor.name == "Platform").length)
+			// if (this.vy > 0) {
+				this.body.collisionFilter.mask = 1
+			// } else {
+			// 	this.body.collisionFilter.mask = 1
+			// }
 		}
 		if (this.sprite) {
 			this.sprite.x = this.x
