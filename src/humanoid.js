@@ -3,8 +3,8 @@ var Entity = require("./entity")
 var config = require("./config")
 
 module.exports = class Humanoid extends Entity {
-	constructor() {
-		super(...arguments)
+	constructor(options) {
+		super(options)
 
 		this.isAttacking = false
 		this.attackDirection = 0
