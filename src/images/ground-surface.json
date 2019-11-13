@@ -55,9 +55,9 @@
   "frameTags": [
    { "name": "surface_0", "from": 0, "to": 0, "direction": "forward" },
    { "name": "surface_1", "from": 1, "to": 1, "direction": "forward" },
-   { "name": "surface-slope_0", "from": 2, "to": 2, "direction": "forward" },
-   { "name": "surface-edge_0", "from": 3, "to": 3, "direction": "forward" },
-   { "name": "surface-edge_1", "from": 4, "to": 4, "direction": "forward" }
+   { "name": "surface-edge_0", "from": 2, "to": 2, "direction": "forward" },
+   { "name": "surface-edge_1", "from": 3, "to": 3, "direction": "forward" },
+   { "name": "surface-edge_2", "from": 4, "to": 4, "direction": "forward" }
   ]
  }
 }

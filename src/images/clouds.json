@@ -1,0 +1,40 @@
+{ "frames": [
+   {
+    "filename": "clouds 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "clouds 1.aseprite",
+    "frame": { "x": 112, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "clouds 2.aseprite",
+    "frame": { "x": 224, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.15-x64",
+  "image": "clouds.png",
+  "format": "RGBA8888",
+  "size": { "w": 336, "h": 112 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

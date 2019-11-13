@@ -45,8 +45,9 @@
   "scale": "1",
   "frameTags": [
    { "name": "ground_0", "from": 0, "to": 0, "direction": "forward" },
-   { "name": "ground-slope_0", "from": 3, "to": 3, "direction": "forward" },
-   { "name": "ground-undersides", "from": 4, "to": 5, "direction": "forward" }
+   { "name": "ground-edge_0", "from": 1, "to": 1, "direction": "forward" },
+   { "name": "ground-underside_0", "from": 4, "to": 4, "direction": "forward" },
+   { "name": "ground-underside_1", "from": 5, "to": 5, "direction": "forward" }
   ]
  }
 }

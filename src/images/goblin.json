@@ -115,6 +115,24 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 100
+   },
+   {
+    "filename": "goblin 13.aseprite",
+    "frame": { "x": 520, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 100
+   },
+   {
+    "filename": "goblin 14.aseprite",
+    "frame": { "x": 560, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 100
    }
  ],
  "meta": {
@@ -122,13 +140,14 @@
   "version": "1.2.15-x64",
   "image": "goblin.png",
   "format": "RGBA8888",
-  "size": { "w": 520, "h": 40 },
+  "size": { "w": 600, "h": 40 },
   "scale": "1",
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
    { "name": "run", "from": 1, "to": 6, "direction": "forward" },
    { "name": "attack_0", "from": 7, "to": 10, "direction": "forward" },
-   { "name": "jump-run", "from": 11, "to": 12, "direction": "forward" }
+   { "name": "jump-static", "from": 11, "to": 12, "direction": "forward" },
+   { "name": "jump-run", "from": 13, "to": 14, "direction": "forward" }
   ]
  }
 }
