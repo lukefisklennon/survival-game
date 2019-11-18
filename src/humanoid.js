@@ -52,12 +52,12 @@ module.exports = class Humanoid extends Entity {
 	attack(direction) {
 		if (!this.isAttacking) {
 			this.direction = direction
-			this.vx = 15 * direction
+			// this.vx = 0 * direction
 		}
 		this.isAttacking = true
-		this.sprite.state = "attack-fist_0"
+		this.sprite.state = "attack_0"
 		this.sprite.onFrameChange = function(frame) {
-			if (this.isAttacking && frame > 3) {
+			if (this.isAttacking && frame > 2) {
 				this.sprite.state = "static"
 				this.isAttacking = false
 			}
@@ -65,12 +65,13 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	handleRunTransition(to) {
-		if (this.sprite.state != to) {
-			this.sprite.state = "run-start"
-			setTimeout(() => {
-				if (this.sprite.state == "run-start") this.sprite.state = to
-			}, 83 * config.humanoid.runTransitionFactor)
-		}
+		// if (this.sprite.state != to) {
+		// 	this.sprite.state = "run-start"
+		// 	setTimeout(() => {
+		// 		if (this.sprite.state == "run-start") this.sprite.state = to
+		// 	}, 83 * config.humanoid.runTransitionFactor)
+		// }
+		this.sprite.state = to
 	}
 
 	handleJumpState(to) {

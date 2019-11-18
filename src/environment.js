@@ -29,7 +29,7 @@ class Terrain extends Store {
 	}
 
 	init() {
-		var platform = new Platform(0, -200, 3)
+		// var platform = new Platform(0, -100, 30)
 		while (world.camera.x > this.rightEdge - config.fov / 2) {
 			this.emplaceRight(this.generateHeight(this.rightEdge))
 		}

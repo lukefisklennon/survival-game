@@ -15,11 +15,25 @@ load(() => {
 	new World()
 
 	world.player = new Humanoid({
-		asset: "thaumaturge",
+		asset: "goblin",
 		x: 0,
 		y: 0,
 		controller: new PlayerController()
 	})
+
+	// var other = new Humanoid({
+	// 	asset: "goblin",
+	// 	x: 200,
+	// 	y: 0,
+	// 	controller: new PlayerController()
+	// })
+	//
+	// var other2 = new Humanoid({
+	// 	asset: "goblin",
+	// 	x: -200,
+	// 	y: 0,
+	// 	controller: new PlayerController()
+	// })
 
 	pixi.ticker.add(() => {
 		world.update(pixi.ticker.elapsedMS)

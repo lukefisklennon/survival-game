@@ -9,10 +9,10 @@
 	},
 	"goblin": {
 		"hitbox": {
-			"x": -0.5,
+			"x": -3,
 			"y": 0,
-			"width": 11,
-			"height": 33
+			"width": 12,
+			"height": 19
 		}
 	},
 	"ground": {

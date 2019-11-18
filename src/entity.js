@@ -56,6 +56,9 @@ module.exports = class Entity extends EventEmitter {
 				this.belowTouching.push(entity)
 				this.updateIsGrounded()
 			}
+			if (this.constructor.name == "Humanoid" && event.collision.normal.y == 0) {
+				this.y -= config.terrain.stepHeight * config.scale
+			}
 		})
 		this.on("collisionEnd", (entity, event) => {
 			var index = this.belowTouching.indexOf(entity)
@@ -89,9 +92,9 @@ module.exports = class Entity extends EventEmitter {
 			this.vx *= 1 - config.friction
 		}
 		if (this.constructor.name == "Humanoid") {
-			console.log(this.belowTouching.filter(entity => entity.constructor.name == "Platform").length)
+			// console.log(this.belowTouching.filter(entity => entity.constructor.name == "Platform").length)
 			// if (this.vy > 0) {
-				this.body.collisionFilter.mask = 1
+				this.body.collisionFilter.mask = 3
 			// } else {
 			// 	this.body.collisionFilter.mask = 1
 			// }

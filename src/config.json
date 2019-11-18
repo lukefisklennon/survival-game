@@ -1,5 +1,5 @@
 {
-	"debug": true,
+	"debug": false,
 	"scale": 7,
 	"deltaLimit": 100,
 	"cameraSpeed": 0.15,
@@ -20,8 +20,8 @@
 		"stepHeight": 4,
 		"octaves": [
 			{
-				"wavelength": 60,
-				"amplitude": 50
+				"wavelength": 25,
+				"amplitude": 40
 			}
 		]
 	}

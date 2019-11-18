@@ -4,7 +4,7 @@ module.exports = function() {
 	PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST
 
 	window.pixi = new PIXI.Application({
-		backgroundColor: 0x25a7da
+		backgroundColor: 0xa0bde1
 	})
 	document.body.appendChild(pixi.view)
 
