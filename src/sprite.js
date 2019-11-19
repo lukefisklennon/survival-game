@@ -32,12 +32,22 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 		})
 		var state = Object.keys(animations)[0]
 		super(animations[state])
+		this.frameDuration = data.frames[0].duration
 		this.anchor.set(0.5, 0.5)
 		this.scale = new PIXI.Point(config.scale, config.scale)
 		this._state = state
 		this.animations = animations
 		world.camera.add(this)
 		this.play()
+	}
+
+	transition(to, between, factor) {
+		if (this.state != to) {
+			this.state = between
+			setTimeout(() => {
+				if (this.state == between) this.state = to
+			}, this.frameDuration * factor)
+		}
 	}
 
 	set state(state) {

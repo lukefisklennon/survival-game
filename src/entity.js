@@ -49,25 +49,6 @@ module.exports = class Entity extends EventEmitter {
 
 		this.controller = options.controller
 
-		this.belowTouching = []
-		this.isGrounded = false
-		this.on("collisionStart", (entity, event) => {
-			if (this.y < entity.y &&/*event.collision.normal.y > 0 && event.collision.normal.x == 0 &&*/ !this.belowTouching.includes(entity)) {
-				this.belowTouching.push(entity)
-				this.updateIsGrounded()
-			}
-			if (this.constructor.name == "Humanoid" && event.collision.normal.y == 0) {
-				this.y -= config.terrain.stepHeight * config.scale
-			}
-		})
-		this.on("collisionEnd", (entity, event) => {
-			var index = this.belowTouching.indexOf(entity)
-			if (index != -1) {
-				this.belowTouching.splice(index, 1)
-				this.updateIsGrounded()
-			}
-		})
-
 		if (config.debug) {
 			var graphics = new PIXI.Graphics()
 			graphics.lineStyle(2, 0xffffff)
@@ -88,17 +69,6 @@ module.exports = class Entity extends EventEmitter {
 	}
 
 	update() {
-		if (this.isGrounded) {
-			this.vx *= 1 - config.friction
-		}
-		if (this.constructor.name == "Humanoid") {
-			// console.log(this.belowTouching.filter(entity => entity.constructor.name == "Platform").length)
-			// if (this.vy > 0) {
-				this.body.collisionFilter.mask = 3
-			// } else {
-			// 	this.body.collisionFilter.mask = 1
-			// }
-		}
 		if (this.sprite) {
 			this.sprite.x = this.x
 			this.sprite.y = this.y
@@ -110,10 +80,6 @@ module.exports = class Entity extends EventEmitter {
 			this.debugBox.rotation = this.body.angle
 		}
 		if (this.controller) this.controller.run(this)
-	}
-
-	updateIsGrounded() {
-		this.isGrounded = (this.belowTouching.length > 0)
 	}
 
 	get x() {
@@ -150,6 +116,7 @@ module.exports = class Entity extends EventEmitter {
 
 	get direction() {
 		if (this.sprite) return Math.sign(this.sprite.scale.x)
+		return 1
 	}
 
 	set direction(direction) {
