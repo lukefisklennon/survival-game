@@ -4,6 +4,9 @@ var config = require("./config")
 
 module.exports = class Humanoid extends Entity {
 	constructor(options) {
+		options.collisionFilter = {
+			group: -1
+		}
 		super(options)
 		this.blaasset = options.asset // TODO
 
@@ -18,7 +21,7 @@ module.exports = class Humanoid extends Entity {
 				this.belowTouching.push(entity)
 				this.updateIsGrounded()
 			}
-			if (this.constructor.name == "Humanoid" && event.collision.normal.y == 0) {
+			if (event.collision.normal.y == 0) {
 				this.y -= config.terrain.stepHeight * config.scale
 			}
 		})

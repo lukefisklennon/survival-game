@@ -14,8 +14,7 @@ var allOptions = {
 	controller: null,
 	static: false,
 	collisionFilter: {
-		category: 1,
-		mask: 1
+		category: 1
 	}
 }
 

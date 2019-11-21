@@ -5,6 +5,14 @@
 	"cameraSpeed": 0.15,
 	"fov": 2500,
 	"friction": 0.1,
+	"healthBar": {
+		"width": 80,
+		"height": 1,
+		"padding": 1,
+		"radius": 0,
+		"foregroundColor": "0x00cc00",
+		"backgroundColor": "0xcccccc"
+	},
 	"player": {
 		"speed": 10,
 		"accelerationFactor": 0.5,
@@ -20,8 +28,8 @@
 		"stepHeight": 4,
 		"octaves": [
 			{
-				"wavelength": 25,
-				"amplitude": 40
+				"wavelength": 50,
+				"amplitude": 80
 			}
 		]
 	}
