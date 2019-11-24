@@ -107,7 +107,7 @@ module.exports = class Humanoid extends Entity {
 		this.isAttacking = true
 		this.sprite.state = "attack_0"
 		this.sprite.onFrameChange = function(frame) {
-			if (this.isAttacking && frame > 2) {
+			if (this.isAttacking && frame >= this.sprite.animations["attack_0"].length - 1) {
 				this.sprite.state = "static"
 				this.isAttacking = false
 			}

@@ -82,6 +82,7 @@ class Terrain extends Store {
 
 class Column extends Entity {
 	constructor(x, y) {
+		y = 200
 		super({
 			asset: null,
 			x: x,

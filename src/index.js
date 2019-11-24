@@ -2,7 +2,8 @@ var PIXI = require("pixi.js")
 var Matter = require("matter-js")
 var config = require("./config")
 var load = require("./loader")
-var Character = require("./character.js")
+var Character = require("./character")
+var Campfire = require("./campfire")
 var Sprite = require("./sprite")
 var World = require("./world")
 var PlayerController = require("./player-controller")
@@ -14,6 +15,8 @@ require("./setup")()
 
 load(() => {
 	new World()
+
+	var campfire = new Campfire(0, 200)
 
 	world.player = new Character({
 		asset: "thaumaturge",

@@ -9,6 +9,7 @@ module.exports = class Pathfinder {
 			entity.move(Math.sign(this.target.x - entity.x))
 		} else {
 			entity.move(0)
+			// if (Math.random() < 0.03) entity.attack(Math.sign(this.target.x - entity.x))
 		}
 	}
 }
