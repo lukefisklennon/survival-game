@@ -100,18 +100,28 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	attack(direction) {
-		if (!this.isAttacking) {
-			this.direction = direction
-			// this.vx = 0 * direction
-		}
-		this.isAttacking = true
-		this.sprite.state = "attack_0"
-		this.sprite.onFrameChange = function(frame) {
-			if (this.isAttacking && frame >= this.sprite.animations["attack_0"].length - 1) {
-				this.sprite.state = "static"
-				this.isAttacking = false
+		if (direction != 0) {
+			if (!this.isAttacking) {
+				this.direction = direction
+				// this.vx = 0 * direction
 			}
-		}.bind(this)
+			this.isAttacking = true
+			this.sprite.state = "attack-fists"
+			this.sprite.onFrameChange = function(frame) {
+				if (frame >= this.sprite.animations["attack-fists"].length - 1) {
+					this.endAttack()
+				}
+			}.bind(this)
+		} else {
+			this.endAttack()
+		}
+	}
+
+	endAttack() {
+		if (this.isAttacking) {
+			this.isAttacking = false
+			this.sprite.state = "static"
+		}
 	}
 
 	handleJumpState(to) {
