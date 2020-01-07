@@ -173,7 +173,7 @@
  ],
  "meta": {
   "app": "http://www.aseprite.org/",
-  "version": "1.2.16.2-x64",
+  "version": "1.2.16.3-x64",
   "image": "goblin.png",
   "format": "RGBA8888",
   "size": { "w": 760, "h": 40 },
@@ -185,6 +185,10 @@
    { "name": "hurt", "from": 13, "to": 14, "direction": "forward" },
    { "name": "jump-static", "from": 15, "to": 16, "direction": "forward" },
    { "name": "jump-run", "from": 17, "to": 18, "direction": "forward" }
+  ],
+  "slices": [
+   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 11, "y": 21, "w": 12, "h": 19 } }, { "frame": 18, "bounds": {"x": 11, "y": 21, "w": 12, "h": 19 } }] },
+   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 11, "bounds": {"x": 29, "y": 19, "w": 10, "h": 21 } }, { "frame": 12, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] }
   ]
  }
 }

@@ -502,14 +502,68 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 56.aseprite",
+    "frame": { "x": 2240, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 57.aseprite",
+    "frame": { "x": 2280, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 58.aseprite",
+    "frame": { "x": 2320, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 59.aseprite",
+    "frame": { "x": 2360, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 60.aseprite",
+    "frame": { "x": 2400, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
+   },
+   {
+    "filename": "thaumaturge2 61.aseprite",
+    "frame": { "x": 2440, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 83
    }
  ],
  "meta": {
   "app": "http://www.aseprite.org/",
-  "version": "1.2.16.2-x64",
+  "version": "1.2.16.3-x64",
   "image": "thaumaturge.png",
   "format": "RGBA8888",
-  "size": { "w": 2240, "h": 40 },
+  "size": { "w": 2480, "h": 40 },
   "scale": "1",
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
@@ -523,7 +577,12 @@
    { "name": "attack-fists_1", "from": 36, "to": 40, "direction": "forward" },
    { "name": "attack-fists_2", "from": 41, "to": 45, "direction": "forward" },
    { "name": "attack-fists_3", "from": 46, "to": 50, "direction": "forward" },
-   { "name": "attack-fists_4", "from": 51, "to": 55, "direction": "forward" }
+   { "name": "attack-fists_4", "from": 51, "to": 55, "direction": "forward" },
+   { "name": "jump-run_2", "from": 56, "to": 61, "direction": "forward" }
+  ],
+  "slices": [
+   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 33, "bounds": {"x": 30, "y": 21, "w": 5, "h": 4 } }, { "frame": 34, "bounds": {"x": 32, "y": 20, "w": 6, "h": 6 } }, { "frame": 35, "bounds": {"x": 33, "y": 19, "w": 6, "h": 8 } }, { "frame": 36, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 37, "bounds": {"x": 26, "y": 21, "w": 5, "h": 4 } }, { "frame": 38, "bounds": {"x": 31, "y": 19, "w": 6, "h": 6 } }, { "frame": 39, "bounds": {"x": 32, "y": 16, "w": 7, "h": 7 } }, { "frame": 40, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 43, "bounds": {"x": 31, "y": 21, "w": 4, "h": 4 } }, { "frame": 44, "bounds": {"x": 32, "y": 19, "w": 6, "h": 7 } }, { "frame": 45, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 46, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 47, "bounds": {"x": 32, "y": 21, "w": 4, "h": 5 } }, { "frame": 48, "bounds": {"x": 33, "y": 17, "w": 6, "h": 6 } }, { "frame": 49, "bounds": {"x": 33, "y": 13, "w": 6, "h": 7 } }, { "frame": 50, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 52, "bounds": {"x": 30, "y": 16, "w": 5, "h": 5 } }, { "frame": 53, "bounds": {"x": 33, "y": 14, "w": 7, "h": 9 } }, { "frame": 54, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 55, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] },
+   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 14, "y": 8, "w": 11, "h": 32 } }, { "frame": 31, "bounds": {"x": 14, "y": 8, "w": 11, "h": 32 } }] }
   ]
  }
 }
