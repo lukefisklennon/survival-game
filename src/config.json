@@ -1,5 +1,5 @@
 {
-	"debug": false,
+	"debug": true,
 	"scale": 7,
 	"deltaLimit": 100,
 	"cameraSpeed": 0.15,

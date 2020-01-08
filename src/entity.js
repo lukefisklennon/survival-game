@@ -13,6 +13,7 @@ var allOptions = {
 	height: 0,
 	controller: null,
 	static: false,
+	sensor: false,
 	collisionFilter: {
 		category: 1
 	}
@@ -41,6 +42,7 @@ module.exports = class Entity extends EventEmitter {
 			inertia: Infinity,
 			friction: 0,
 			isStatic: options.static,
+			isSensor: options.sensor,
 			collisionFilter: options.collisionFilter
 		})
 		this.body.entity = this
@@ -76,6 +78,9 @@ module.exports = class Entity extends EventEmitter {
 		if (config.debug) {
 			this.debugBox.x = this.x
 			this.debugBox.y = this.y
+			// console.log(this.body.width)
+			// this.debugBox.width = this.body.width // TODO
+			// this.debugBox.height = this.body.height
 			this.debugBox.rotation = this.body.angle
 		}
 		if (this.controller) this.controller.run(this)

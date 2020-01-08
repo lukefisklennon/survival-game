@@ -19,5 +19,11 @@
 	},
 	"run-start": {
 		"loop": false
+	},
+	"campfire-lit_0": {
+		"loop": true
+	},
+	"campfire-lit_1": {
+		"loop": true
 	}
 }
