@@ -12,17 +12,38 @@ module.exports = class Humanoid extends Entity {
 
 		this.isAttacking = false
 		this.attackDirection = 0
+		this.attackBox = new Entity({
+			static: true,
+			sensor: true,
+			width: 6 * config.scale,
+			height: 6 * config.scale
+		})
+		this.attackBox.on("collisionStart", (entity, event) => {
+			if (this.isAttacking && entity != this && entity.constructor.name == "Character") {
+				entity.vx += 3 * this.direction
+				if (entity == world.player) {
+					entity.hp -= 0.13 / 5
+				} else {
+					entity.hp -= 0.13
+				}
+			}
+		})
+		// this.attackBox.scaleX = 1
+		// this.attackBox.scaleY = 1
+		this.extractSliceData()
 
 		this.belowTouching = []
 		this.isGrounded = false
 
 		this.on("collisionStart", (entity, event) => {
-			if (this.y < entity.y &&/*event.collision.normal.y > 0 && event.collision.normal.x == 0 &&*/ !this.belowTouching.includes(entity)) {
-				this.belowTouching.push(entity)
-				this.updateIsGrounded()
-			}
-			if (event.collision.normal.y == 0) {
-				this.y -= config.terrain.stepHeight * config.scale
+			if (entity.constructor.name == "Column") {
+				if (this.y < entity.y && /*event.collision.normal.y > 0 && event.collision.normal.x == 0 &&*/ !this.belowTouching.includes(entity)) {
+					this.belowTouching.push(entity)
+					this.updateIsGrounded()
+				}
+				if (event.collision.normal.y == 0) {
+					this.y -= config.terrain.stepHeight * config.scale
+				}
 			}
 		})
 
@@ -36,10 +57,25 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	update() {
-		super.update()
+		this.attackBox.x = this.x + (-this.width / 2 - 6 * config.scale / 2) * this.direction
+		this.attackBox.y = this.y - this.height / 2 - 6 * config.scale / 2
+		if (this.isAttacking) {
+			var slice = this.getAttackSlice(this.sprite.currentFrame + this.sprite.frameTags.find(tag => tag.name == "attack-fists_0").from)
+			if (slice != null) {
+				this.attackBox.x += (slice.bounds.x * config.scale - 6 * config.scale / 2) * this.direction
+				this.attackBox.y += slice.bounds.y * config.scale - 6 * config.scale / 2
+				// Matter.Body.scale(this.attackBox.body, 1 / this.attackBox.scaleX, 1 / this.attackBox.scaleY)
+				// this.attackBox.scaleX = 5//slice.bounds.width
+				// this.attackBox.scaleY = 5//slice.bounds.height
+				// Matter.Body.scale(this.attackBox.body, this.attackBox.scaleX, this.attackBox.scaleY)
+			}
+		}
+
 		if (this.isGrounded) {
 			this.vx *= 1 - config.friction
 		}
+
+		super.update()
 
 		// Platform stuff
 
@@ -106,11 +142,14 @@ module.exports = class Humanoid extends Entity {
 				// this.vx = 0 * direction
 			}
 			this.isAttacking = true
-			this.sprite.state = "attack-fists"
-			this.sprite.onFrameChange = function(frame) {
-				if (frame >= this.sprite.animations["attack-fists"].length - 1) {
+			var iii = 0
+			this.sprite.state = "attack-fists_" + iii
+			this.sprite.onComplete = function(frame) {
+				// console.log(this.sprite.animations["attack-fists_0"].length)
+				// console.log(frame, this.sprite.animations["attack-fists_" + iii].length)
+				// if (frame >= this.sprite.animations["attack-fists_" + iii].length) {
 					this.endAttack()
-				}
+				// }
 			}.bind(this)
 		} else {
 			this.endAttack()
@@ -141,5 +180,18 @@ module.exports = class Humanoid extends Entity {
 
 	updateIsGrounded() {
 		this.isGrounded = (this.belowTouching.length > 0)
+	}
+
+	extractSliceData() {
+		this.slices = this.sprite.slices.find(slice => slice.name == "hitbox-attacks").keys
+	}
+
+	getAttackSlice(frame) {
+		var result = this.slices.find(slice => slice.frame == frame)
+		if (result && (result.bounds.x >= 0 && result.bounds.y >= 0)) {
+			return result
+		} else {
+			return null
+		}
 	}
 }

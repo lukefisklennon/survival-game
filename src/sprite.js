@@ -32,6 +32,8 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 		})
 		var state = Object.keys(animations)[0]
 		super(animations[state])
+		this.frameTags = frameTags // TODO remove this
+		this.slices = data.meta.slices
 		this.frameDuration = data.frames[0].duration
 		this.anchor.set(0.5, 0.5)
 		this.scale = new PIXI.Point(config.scale, config.scale)

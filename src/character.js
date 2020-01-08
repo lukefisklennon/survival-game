@@ -14,7 +14,10 @@ module.exports = class Character extends Humanoid {
 
 	update() {
 		// this.hp -= 0.001
-		if (this.hp < 0) this.hp = 0
+		if (this.hp < 0) {
+			this.hp = 0
+			this.destroy()
+		}
 		super.update()
 		this.updateHealthBar()
 	}
@@ -43,5 +46,10 @@ module.exports = class Character extends Humanoid {
 		this.healthBar.pivot.x = this.width / 2
 		this.healthBar.pivot.y = this.height / 2
 		world.camera.add(this.healthBar)
+	}
+
+	destroy() {
+		this.healthBar.parent.removeChild(this.healthBar)
+		super.destroy()
 	}
 }

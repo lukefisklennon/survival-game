@@ -181,7 +181,7 @@
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
    { "name": "run", "from": 1, "to": 6, "direction": "forward" },
-   { "name": "attack_0", "from": 7, "to": 12, "direction": "forward" },
+   { "name": "attack-fists_0", "from": 7, "to": 12, "direction": "forward" },
    { "name": "hurt", "from": 13, "to": 14, "direction": "forward" },
    { "name": "jump-static", "from": 15, "to": 16, "direction": "forward" },
    { "name": "jump-run", "from": 17, "to": 18, "direction": "forward" }
