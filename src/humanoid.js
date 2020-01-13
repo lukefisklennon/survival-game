@@ -11,6 +11,7 @@ module.exports = class Humanoid extends Entity {
 		this.blaasset = options.asset // TODO
 
 		this.isAttacking = false
+		this.flagEndAttack = false
 		this.attackDirection = 0
 		this.attackBox = new Entity({
 			static: true,
@@ -18,6 +19,8 @@ module.exports = class Humanoid extends Entity {
 			width: 6 * config.scale,
 			height: 6 * config.scale
 		})
+		this.attackIndex = 0
+
 		this.attackBox.on("collisionStart", (entity, event) => {
 			if (this.isAttacking && entity != this && entity.constructor.name == "Character") {
 				entity.vx += 3 * this.direction
@@ -136,31 +139,39 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	attack(direction) {
-		if (direction != 0) {
+		this.attackDirection = direction
+		if (this.attackDirection != 0) {
+			this.flagEndAttack = false
 			if (!this.isAttacking) {
-				this.direction = direction
-				// this.vx = 0 * direction
+				this.attackBeat()
+				this.isAttacking = true
+				this.sprite.state = "attack-fists_" + this.attackIndex
+				this.sprite.onComplete = function(frame) {
+					if (!this.flagEndAttack) {
+						this.attackIndex++
+						if(!("attack-fists_" + this.attackIndex in this.sprite.animations)) {
+							this.attackIndex = 0
+						}
+						this.sprite.state = "attack-fists_" + this.attackIndex
+						this.sprite.gotoAndPlay(0)
+						this.attackBeat()
+					} else {
+						this.isAttacking = false
+						this.flagEndAttack = false
+						this.sprite.state = "static"
+						this.attackIndex = 0
+						this.sprite.onComplete = null
+					}
+				}.bind(this)
 			}
-			this.isAttacking = true
-			var iii = 0
-			this.sprite.state = "attack-fists_" + iii
-			this.sprite.onComplete = function(frame) {
-				// console.log(this.sprite.animations["attack-fists_0"].length)
-				// console.log(frame, this.sprite.animations["attack-fists_" + iii].length)
-				// if (frame >= this.sprite.animations["attack-fists_" + iii].length) {
-					this.endAttack()
-				// }
-			}.bind(this)
 		} else {
-			this.endAttack()
+			this.flagEndAttack = true
 		}
 	}
 
-	endAttack() {
-		if (this.isAttacking) {
-			this.isAttacking = false
-			this.sprite.state = "static"
-		}
+	attackBeat() {
+		this.direction = this.attackDirection
+		this.vx += 3 * this.attackDirection
 	}
 
 	handleJumpState(to) {
@@ -193,5 +204,10 @@ module.exports = class Humanoid extends Entity {
 		} else {
 			return null
 		}
+	}
+
+	destroy() {
+		this.attackBox.destroy()
+		super.destroy()
 	}
 }

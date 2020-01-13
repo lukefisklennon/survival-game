@@ -13,8 +13,25 @@ module.exports = class Character extends Humanoid {
 	}
 
 	update() {
-		// this.hp -= 0.001
+		this.hp += 0.001
+		if (this.hp > 1) this.hp = 1
 		if (this.hp < 0) {
+			// var Pathfinder = require("./pathfinder")
+			// var enemy1 = new Character({
+			// 	asset: "goblin",
+			// 	x: Math.random() * 1000 - 500,
+			// 	y: 0,
+			// 	controller: new Pathfinder(300)
+			// })
+			// enemy1.controller.target = world.player
+			// var enemy2 = new Character({
+			// 	asset: "goblin",
+			// 	x: Math.random() * 1000 - 500,
+			// 	y: 0,
+			// 	controller: new Pathfinder(300)
+			// })
+			// enemy2.controller.target = world.player
+
 			this.hp = 0
 			this.destroy()
 		}

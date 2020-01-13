@@ -29,7 +29,7 @@ load(() => {
 		asset: "goblin",
 		x: -500,
 		y: 0,
-		controller: new Pathfinder(500)
+		controller: new Pathfinder(300)//500)
 	})
 
 	var enemy2 = new Character({
@@ -43,14 +43,14 @@ load(() => {
 		asset: "goblin",
 		x: 250,
 		y: 0,
-		controller: new Pathfinder(700)
+		controller: new Pathfinder(300)//700)
 	})
 
 	var enemy4 = new Character({
 		asset: "goblin",
 		x: 500,
 		y: 0,
-		controller: new Pathfinder(900)
+		controller: new Pathfinder(300)//900)
 	})
 
 	enemy1.controller.target = world.player
