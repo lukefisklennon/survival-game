@@ -3,7 +3,7 @@
 	"scale": 7,
 	"deltaLimit": 100,
 	"cameraSpeed": 0.15,
-	"fov": 2500,
+	"fov": 25000,
 	"friction": 0.1,
 	"healthBar": {
 		"width": 80,
@@ -16,7 +16,7 @@
 	"player": {
 		"speed": 10,
 		"accelerationFactor": 0.5,
-		"jumpPower": 10
+		"jumpPower": 12
 	},
 	"humanoid": {
 		"airAccelerationFactor": 0.5,

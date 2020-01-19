@@ -25,7 +25,7 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 					var rect = frame.frame
 					animations[tag.name].push({
 						texture: new PIXI.Texture(texture, new PIXI.Rectangle(rect.x, rect.y, rect.w, rect.h)),
-						time: frame.duration
+						time: frame.duration * (asset == "goblin" ? 1.5 : 1)
 					})
 				}
 			}

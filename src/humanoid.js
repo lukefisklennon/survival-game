@@ -16,18 +16,20 @@ module.exports = class Humanoid extends Entity {
 		this.attackBox = new Entity({
 			static: true,
 			sensor: true,
-			width: 6 * config.scale,
-			height: 6 * config.scale
+			width: 6 * config.scale * (this.blaasset == "goblin" ? 10 : 1),
+			height: 6 * config.scale * (this.blaasset == "goblin" ? 4 : 1)
 		})
 		this.attackIndex = 0
 
 		this.attackBox.on("collisionStart", (entity, event) => {
 			if (this.isAttacking && entity != this && entity.constructor.name == "Character") {
-				entity.vx += 3 * this.direction
-				if (entity == world.player) {
-					entity.hp -= 0.13 / 5
+				if (entity != world.player && this == world.player) {
+					entity.hp -= 2
+					this.hp += 0.13
+					entity.vx += 3 * this.direction
 				} else {
-					entity.hp -= 0.13
+					entity.hp -= 0.13 / 5
+					entity.vx += 3 * this.direction
 				}
 			}
 		})
@@ -65,8 +67,8 @@ module.exports = class Humanoid extends Entity {
 		if (this.isAttacking) {
 			var slice = this.getAttackSlice(this.sprite.currentFrame + this.sprite.frameTags.find(tag => tag.name == "attack-fists_0").from)
 			if (slice != null) {
-				this.attackBox.x += (slice.bounds.x * config.scale - 6 * config.scale / 2) * this.direction
-				this.attackBox.y += slice.bounds.y * config.scale - 6 * config.scale / 2
+				this.attackBox.x += (slice.bounds.x * config.scale - 6 * config.scale / 2) * this.direction * (this.blaasset == "goblin" ? 3.5 : 0.8)
+				this.attackBox.y += slice.bounds.y * config.scale - 6 * config.scale / 2 + (this.blaasset == "goblin" ? 350 : 0)
 				// Matter.Body.scale(this.attackBox.body, 1 / this.attackBox.scaleX, 1 / this.attackBox.scaleY)
 				// this.attackBox.scaleX = 5//slice.bounds.width
 				// this.attackBox.scaleY = 5//slice.bounds.height
@@ -98,17 +100,25 @@ module.exports = class Humanoid extends Entity {
 			if (!this.isGrounded) accelerationFactor *= config.humanoid.airAccelerationFactor
 			this.setMovement(x * config.player.speed, accelerationFactor)
 			if (this.isGrounded) {
-				if (x != 0) {
-					if (this.blaasset == "thaumaturge") {
-						this.sprite.transition("run", "run-start", config.humanoid.runTransitionFactor)
+				if (this.blaasset == "goblin" && (this.sprite.state == "jump-static" || this.sprite.state == "jump-run")) {
+					window.enemies.forEach(enemy => {
+						enemy.hp -= 0.13 * 2
+						enemy.vx += 15 * 3 * Math.sign(enemy.x - this.x)
+					})
+				}
+				if (this.sprite.state != "run-start") {
+					if (x != 0) {
+						if (this.blaasset == "thaumaturge" && this.sprite.state == "static") {
+							this.sprite.transition("run", "run-start", config.humanoid.runTransitionFactor)
+						} else {
+							this.sprite.state = "run"
+						}
 					} else {
-						this.sprite.state = "run"
-					}
-				} else {
-					if (this.blaasset == "thaumaturge") {
-						this.sprite.transition("static", "run-start", config.humanoid.runTransitionFactor)
-					} else {
-						this.sprite.state = "static"
+						if (this.blaasset == "thaumaturge" && this.sprite.state == "run") {
+							this.sprite.transition("static", "run-start", config.humanoid.runTransitionFactor)
+						} else {
+							this.sprite.state = "static"
+						}
 					}
 				}
 			} else {
@@ -131,7 +141,7 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	jump(power) {
-		if (this.isGrounded && !this.isAttacking) {
+		if (this.vy >= 0/*this.isGrounded*/) {// && !this.isAttacking) {
 			this.vy = -config.player.jumpPower * power
 			// this.belowTouching = []
 			this.updateIsGrounded()

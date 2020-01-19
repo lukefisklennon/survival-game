@@ -13,5 +13,8 @@ module.exports = class Pathfinder {
 			entity.attack(Math.sign(this.target.x - entity.x))
 			// if (Math.random() < 0.03) entity.attack(Math.sign(this.target.x - entity.x))
 		}
+		if (entity.y - this.target.y > 0) {
+			entity.jump(1)
+		}
 	}
 }

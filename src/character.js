@@ -15,7 +15,7 @@ module.exports = class Character extends Humanoid {
 	update() {
 		this.hp += 0.001
 		if (this.hp > 1) this.hp = 1
-		if (this.hp < 0) {
+		if (this.hp <= 0) {
 			// var Pathfinder = require("./pathfinder")
 			// var enemy1 = new Character({
 			// 	asset: "goblin",
@@ -31,6 +31,12 @@ module.exports = class Character extends Humanoid {
 			// 	controller: new Pathfinder(300)
 			// })
 			// enemy2.controller.target = world.player
+
+			if (this.blaasset == "thaumaturge") {
+				window.score++
+			} else {
+				alert("Score: " + window.score)
+			}
 
 			this.hp = 0
 			this.destroy()
@@ -66,7 +72,9 @@ module.exports = class Character extends Humanoid {
 	}
 
 	destroy() {
-		this.healthBar.parent.removeChild(this.healthBar)
+		try {
+			this.healthBar.parent.removeChild(this.healthBar)
+		} catch(e) {} // TODO
 		super.destroy()
 	}
 }

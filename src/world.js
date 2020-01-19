@@ -9,6 +9,7 @@ module.exports = class World {
 		window.world = this
 
 		this.engine = Matter.Engine.create()
+		// this.engine.world.gravity.y = 0.1
 		this.entities = new Entities()
 		this.camera = new Camera(0, 0)
 		this.environment = new Environment()
