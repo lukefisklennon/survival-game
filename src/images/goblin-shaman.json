@@ -1,180 +1,180 @@
 { "frames": [
    {
-    "filename": "goblin 0.aseprite",
+    "filename": "goblin-shaman 0.aseprite",
     "frame": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 1.aseprite",
+    "filename": "goblin-shaman 1.aseprite",
     "frame": { "x": 40, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 2.aseprite",
+    "filename": "goblin-shaman 2.aseprite",
     "frame": { "x": 80, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 3.aseprite",
+    "filename": "goblin-shaman 3.aseprite",
     "frame": { "x": 120, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 4.aseprite",
+    "filename": "goblin-shaman 4.aseprite",
     "frame": { "x": 160, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 5.aseprite",
+    "filename": "goblin-shaman 5.aseprite",
     "frame": { "x": 200, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 6.aseprite",
+    "filename": "goblin-shaman 6.aseprite",
     "frame": { "x": 240, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 7.aseprite",
+    "filename": "goblin-shaman 7.aseprite",
     "frame": { "x": 280, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 8.aseprite",
+    "filename": "goblin-shaman 8.aseprite",
     "frame": { "x": 320, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 9.aseprite",
+    "filename": "goblin-shaman 9.aseprite",
     "frame": { "x": 360, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 10.aseprite",
+    "filename": "goblin-shaman 10.aseprite",
     "frame": { "x": 400, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 11.aseprite",
+    "filename": "goblin-shaman 11.aseprite",
     "frame": { "x": 440, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 12.aseprite",
+    "filename": "goblin-shaman 12.aseprite",
     "frame": { "x": 480, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 13.aseprite",
+    "filename": "goblin-shaman 13.aseprite",
     "frame": { "x": 520, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 14.aseprite",
+    "filename": "goblin-shaman 14.aseprite",
     "frame": { "x": 560, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 15.aseprite",
+    "filename": "goblin-shaman 15.aseprite",
     "frame": { "x": 600, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 16.aseprite",
+    "filename": "goblin-shaman 16.aseprite",
     "frame": { "x": 640, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 17.aseprite",
+    "filename": "goblin-shaman 17.aseprite",
     "frame": { "x": 680, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    },
    {
-    "filename": "goblin 18.aseprite",
+    "filename": "goblin-shaman 18.aseprite",
     "frame": { "x": 720, "y": 0, "w": 40, "h": 40 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 83
+    "duration": 100
    }
  ],
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.16.3-x64",
-  "image": "goblin.png",
+  "image": "goblin-shaman.png",
   "format": "RGBA8888",
   "size": { "w": 760, "h": 40 },
   "scale": "1",
@@ -187,8 +187,7 @@
    { "name": "jump-run", "from": 17, "to": 18, "direction": "forward" }
   ],
   "slices": [
-   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 11, "y": 21, "w": 13, "h": 19 } }, { "frame": 18, "bounds": {"x": 11, "y": 21, "w": 13, "h": 19 } }] },
-   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 11, "bounds": {"x": 29, "y": 19, "w": 10, "h": 21 } }, { "frame": 12, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] }
+   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 10, "y": 20, "w": 15, "h": 20 } }] }
   ]
  }
 }
