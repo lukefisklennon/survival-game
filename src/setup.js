@@ -6,7 +6,6 @@ module.exports = function() {
 	window.pixi = new PIXI.Application({
 		backgroundColor: 0xa0bde1
 	})
-
 	document.body.appendChild(pixi.view)
 
 	function resize() {

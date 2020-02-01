@@ -29,13 +29,9 @@ module.exports = class Entity extends EventEmitter {
 		if (options.asset) {
 			var data = entitiesData[options.asset]
 			this.sprite = new Sprite(options.asset)
-			this.width = data.hitbox.width * config.scale * (options.asset == "goblin" ? 4 : 1)
-			this.height = data.hitbox.height * config.scale * (options.asset == "goblin" ? 4 : 1)
+			this.width = data.hitbox.width * config.scale
+			this.height = data.hitbox.height * config.scale
 			this.sprite.anchor.set(0.5 + (config.scale * data.hitbox.x / this.sprite.width), (this.sprite.height - this.height / 2 + data.hitbox.y * config.scale) / this.sprite.height)
-			if (options.asset == "goblin") {
-				this.sprite.scale.x = 28
-				this.sprite.scale.y = 28
-			}
 			this.direction = 1
 		} else {
 			this.width = options.width
@@ -77,9 +73,6 @@ module.exports = class Entity extends EventEmitter {
 		if (this.sprite) {
 			this.sprite.x = this.x
 			this.sprite.y = this.y
-			if (this.blaasset == "goblin") {
-				this.sprite.y -= 799
-			}
 		}
 		// this.sprite.rotation = this.body.angle
 		if (config.debug) {
