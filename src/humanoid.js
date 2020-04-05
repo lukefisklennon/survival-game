@@ -63,7 +63,7 @@ module.exports = class Humanoid extends Entity {
 		this.attackBox.x = this.x + (-this.width / 2 - 6 * config.scale / 2) * this.direction
 		this.attackBox.y = this.y - this.height / 2 - 6 * config.scale / 2
 		if (this.isAttacking) {
-			var slice = this.getAttackSlice(this.sprite.currentFrame + this.sprite.frameTags.find(tag => tag.name == "attack-fists_0").from)
+			var slice = this.getAttackSlice(this.sprite.currentFrame + this.sprite.frameTags.find(tag => tag.name == "attack_0").from)
 			if (slice != null) {
 				this.attackBox.x += (slice.bounds.x * config.scale - 6 * config.scale / 2) * this.direction
 				this.attackBox.y += slice.bounds.y * config.scale - 6 * config.scale / 2
@@ -100,13 +100,21 @@ module.exports = class Humanoid extends Entity {
 			if (this.isGrounded) {
 				if (x != 0) {
 					if (this.blaasset == "thaumaturge") {
-						this.sprite.transition("run", "run-start", config.humanoid.runTransitionFactor)
+						if (this.sprite.state == "static") {
+							this.sprite.transition("run", "run-start", config.humanoid.runTransitionFactor)
+						} else if (this.sprite.state.includes("jump")) {
+							this.sprite.transition("run", "jump-end", config.humanoid.runTransitionFactor)
+						}
 					} else {
 						this.sprite.state = "run"
 					}
 				} else {
 					if (this.blaasset == "thaumaturge") {
-						this.sprite.transition("static", "run-start", config.humanoid.runTransitionFactor)
+						if (this.sprite.state == "run") {
+							this.sprite.transition("static", "run-start", config.humanoid.runTransitionFactor)
+						} else if (this.sprite.state.includes("jump")) {
+							this.sprite.transition("static", "jump-end", config.humanoid.runTransitionFactor)
+						}
 					} else {
 						this.sprite.state = "static"
 					}
@@ -145,14 +153,14 @@ module.exports = class Humanoid extends Entity {
 			if (!this.isAttacking) {
 				this.attackBeat()
 				this.isAttacking = true
-				this.sprite.state = "attack-fists_" + this.attackIndex
+				this.sprite.state = "attack_" + this.attackIndex
 				this.sprite.onComplete = function(frame) {
 					if (!this.flagEndAttack) {
 						this.attackIndex++
-						if(!("attack-fists_" + this.attackIndex in this.sprite.animations)) {
+						if(!("attack_" + this.attackIndex in this.sprite.animations)) {
 							this.attackIndex = 0
 						}
-						this.sprite.state = "attack-fists_" + this.attackIndex
+						this.sprite.state = "attack_" + this.attackIndex
 						this.sprite.gotoAndPlay(0)
 						this.attackBeat()
 					} else {
