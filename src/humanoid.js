@@ -198,7 +198,7 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	updateIsGrounded() {
-		this.isGrounded = (this.belowTouching.length > 0)
+		this.isGrounded = true//(this.belowTouching.length > 0)
 	}
 
 	extractSliceData() {

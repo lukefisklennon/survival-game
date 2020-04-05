@@ -24,12 +24,12 @@
 		"runTransitionFactor": 0.6
 	},
 	"terrain": {
-		"columnHeight": 7,
-		"stepHeight": 4,
+		"columnHeight": 14,
+		"stepHeight": 2,
 		"octaves": [
 			{
 				"wavelength": 50,
-				"amplitude": 80
+				"amplitude": 40
 			}
 		]
 	}
