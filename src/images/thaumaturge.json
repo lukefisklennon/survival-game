@@ -6,7 +6,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 1.aseprite",
@@ -15,7 +15,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 2.aseprite",
@@ -24,7 +24,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 3.aseprite",
@@ -33,7 +33,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 4.aseprite",
@@ -42,7 +42,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 5.aseprite",
@@ -51,7 +51,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 6.aseprite",
@@ -60,7 +60,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 7.aseprite",
@@ -69,7 +69,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 8.aseprite",
@@ -78,7 +78,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 9.aseprite",
@@ -87,7 +87,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 10.aseprite",
@@ -96,7 +96,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 11.aseprite",
@@ -105,7 +105,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 12.aseprite",
@@ -114,7 +114,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 13.aseprite",
@@ -123,7 +123,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 14.aseprite",
@@ -132,7 +132,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 15.aseprite",
@@ -141,7 +141,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 16.aseprite",
@@ -150,7 +150,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 17.aseprite",
@@ -159,7 +159,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 18.aseprite",
@@ -168,7 +168,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 19.aseprite",
@@ -177,7 +177,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 20.aseprite",
@@ -186,7 +186,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 21.aseprite",
@@ -195,7 +195,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 22.aseprite",
@@ -204,7 +204,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 23.aseprite",
@@ -213,7 +213,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 24.aseprite",
@@ -222,7 +222,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 25.aseprite",
@@ -231,7 +231,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 26.aseprite",
@@ -240,7 +240,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 27.aseprite",
@@ -249,7 +249,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 28.aseprite",
@@ -258,7 +258,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 29.aseprite",
@@ -267,7 +267,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 30.aseprite",
@@ -276,7 +276,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 31.aseprite",
@@ -285,7 +285,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 32.aseprite",
@@ -294,7 +294,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 33.aseprite",
@@ -303,7 +303,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 34.aseprite",
@@ -312,7 +312,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 35.aseprite",
@@ -321,7 +321,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 36.aseprite",
@@ -330,7 +330,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 37.aseprite",
@@ -339,7 +339,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 38.aseprite",
@@ -348,7 +348,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 39.aseprite",
@@ -357,7 +357,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 40.aseprite",
@@ -366,7 +366,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 41.aseprite",
@@ -375,7 +375,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 42.aseprite",
@@ -384,7 +384,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 43.aseprite",
@@ -393,7 +393,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 44.aseprite",
@@ -402,7 +402,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 45.aseprite",
@@ -411,7 +411,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 46.aseprite",
@@ -420,7 +420,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 47.aseprite",
@@ -429,7 +429,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 48.aseprite",
@@ -438,7 +438,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 49.aseprite",
@@ -447,7 +447,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 50.aseprite",
@@ -456,7 +456,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 51.aseprite",
@@ -465,7 +465,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 52.aseprite",
@@ -474,7 +474,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 53.aseprite",
@@ -483,7 +483,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 54.aseprite",
@@ -492,7 +492,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 55.aseprite",
@@ -501,7 +501,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 56.aseprite",
@@ -510,7 +510,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 57.aseprite",
@@ -519,7 +519,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 58.aseprite",
@@ -528,7 +528,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 59.aseprite",
@@ -537,7 +537,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 60.aseprite",
@@ -546,7 +546,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 61.aseprite",
@@ -555,7 +555,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 62.aseprite",
@@ -564,7 +564,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 63.aseprite",
@@ -573,7 +573,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 64.aseprite",
@@ -582,7 +582,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 65.aseprite",
@@ -591,7 +591,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 66.aseprite",
@@ -600,7 +600,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 67.aseprite",
@@ -609,7 +609,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 68.aseprite",
@@ -618,7 +618,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 69.aseprite",
@@ -627,7 +627,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 70.aseprite",
@@ -636,7 +636,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 71.aseprite",
@@ -645,7 +645,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 72.aseprite",
@@ -654,7 +654,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 73.aseprite",
@@ -663,7 +663,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 74.aseprite",
@@ -672,7 +672,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 75.aseprite",
@@ -681,7 +681,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 76.aseprite",
@@ -690,7 +690,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 77.aseprite",
@@ -699,7 +699,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 78.aseprite",
@@ -708,7 +708,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 79.aseprite",
@@ -717,7 +717,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 80.aseprite",
@@ -726,7 +726,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 81.aseprite",
@@ -735,7 +735,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 82.aseprite",
@@ -744,7 +744,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 83.aseprite",
@@ -753,7 +753,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 84.aseprite",
@@ -762,7 +762,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 85.aseprite",
@@ -771,7 +771,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 86.aseprite",
@@ -780,7 +780,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 87.aseprite",
@@ -789,7 +789,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 88.aseprite",
@@ -798,7 +798,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 89.aseprite",
@@ -807,7 +807,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 90.aseprite",
@@ -816,7 +816,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 91.aseprite",
@@ -825,7 +825,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 92.aseprite",
@@ -834,7 +834,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 93.aseprite",
@@ -843,7 +843,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 94.aseprite",
@@ -852,7 +852,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
    },
    {
     "filename": "thaumaturge 95.aseprite",
@@ -861,7 +861,25 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
-    "duration": 34
+    "duration": 40
+   },
+   {
+    "filename": "thaumaturge 96.aseprite",
+    "frame": { "x": 3840, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 40
+   },
+   {
+    "filename": "thaumaturge 97.aseprite",
+    "frame": { "x": 3880, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 40
    }
  ],
  "meta": {
@@ -869,30 +887,31 @@
   "version": "1.2.17-x64",
   "image": "thaumaturge.png",
   "format": "RGBA8888",
-  "size": { "w": 3840, "h": 40 },
+  "size": { "w": 3920, "h": 40 },
   "scale": "1",
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
    { "name": "run", "from": 1, "to": 16, "direction": "forward" },
    { "name": "run-start", "from": 17, "to": 17, "direction": "forward" },
-   { "name": "attack-fists_5", "from": 18, "to": 27, "direction": "forward" },
-   { "name": "attack-fists_6", "from": 28, "to": 30, "direction": "forward" },
-   { "name": "hurt", "from": 31, "to": 31, "direction": "forward" },
-   { "name": "run-24fps", "from": 32, "to": 47, "direction": "forward" },
-   { "name": "attack-fists_0", "from": 48, "to": 52, "direction": "forward" },
-   { "name": "attack-fists_1", "from": 53, "to": 57, "direction": "forward" },
-   { "name": "attack-fists_2", "from": 58, "to": 62, "direction": "forward" },
-   { "name": "attack-fists_3", "from": 63, "to": 67, "direction": "forward" },
-   { "name": "attack-fists_4", "from": 68, "to": 72, "direction": "forward" },
-   { "name": "jump-run", "from": 73, "to": 78, "direction": "forward" },
-   { "name": "jump-static", "from": 79, "to": 84, "direction": "forward" },
-   { "name": "jump-end", "from": 85, "to": 85, "direction": "forward" },
-   { "name": "attack-fists-air_0", "from": 86, "to": 90, "direction": "forward" },
-   { "name": "attack-fists-air_1", "from": 91, "to": 95, "direction": "forward" }
+   { "name": "attack-fists_0", "from": 18, "to": 22, "direction": "forward" },
+   { "name": "attack-fists_1", "from": 23, "to": 27, "direction": "forward" },
+   { "name": "attack-fists_6", "from": 30, "to": 32, "direction": "forward" },
+   { "name": "hurt", "from": 33, "to": 33, "direction": "forward" },
+   { "name": "run-24fps", "from": 34, "to": 49, "direction": "forward" },
+   { "name": "attack-fists", "from": 50, "to": 54, "direction": "forward" },
+   { "name": "attack-fists_bleh", "from": 55, "to": 59, "direction": "forward" },
+   { "name": "attack-fists_2", "from": 60, "to": 64, "direction": "forward" },
+   { "name": "attack-fists_3", "from": 65, "to": 69, "direction": "forward" },
+   { "name": "attack-fists_4", "from": 70, "to": 74, "direction": "forward" },
+   { "name": "jump-run", "from": 75, "to": 80, "direction": "forward" },
+   { "name": "jump-static", "from": 81, "to": 86, "direction": "forward" },
+   { "name": "jump-end", "from": 87, "to": 87, "direction": "forward" },
+   { "name": "attack-fists-air_0", "from": 88, "to": 92, "direction": "forward" },
+   { "name": "attack-fists-air_1", "from": 93, "to": 97, "direction": "forward" }
   ],
   "slices": [
-   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 33, "bounds": {"x": 30, "y": 21, "w": 5, "h": 4 } }, { "frame": 34, "bounds": {"x": 32, "y": 20, "w": 6, "h": 6 } }, { "frame": 35, "bounds": {"x": 33, "y": 19, "w": 6, "h": 8 } }, { "frame": 36, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 37, "bounds": {"x": 26, "y": 21, "w": 5, "h": 4 } }, { "frame": 38, "bounds": {"x": 31, "y": 19, "w": 6, "h": 6 } }, { "frame": 39, "bounds": {"x": 32, "y": 16, "w": 7, "h": 7 } }, { "frame": 40, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 43, "bounds": {"x": 31, "y": 21, "w": 4, "h": 4 } }, { "frame": 44, "bounds": {"x": 32, "y": 19, "w": 6, "h": 7 } }, { "frame": 45, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 46, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 47, "bounds": {"x": 32, "y": 21, "w": 4, "h": 5 } }, { "frame": 48, "bounds": {"x": 33, "y": 17, "w": 6, "h": 6 } }, { "frame": 49, "bounds": {"x": 33, "y": 13, "w": 6, "h": 7 } }, { "frame": 50, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 52, "bounds": {"x": 30, "y": 16, "w": 5, "h": 5 } }, { "frame": 53, "bounds": {"x": 33, "y": 14, "w": 7, "h": 9 } }, { "frame": 54, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 55, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 70, "bounds": {"x": 20, "y": 15, "w": 11, "h": 6 } }, { "frame": 71, "bounds": {"x": 28, "y": 14, "w": 8, "h": 8 } }, { "frame": 72, "bounds": {"x": 28, "y": 12, "w": 10, "h": 12 } }, { "frame": 73, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 75, "bounds": {"x": 20, "y": 15, "w": 10, "h": 6 } }, { "frame": 76, "bounds": {"x": 27, "y": 14, "w": 8, "h": 8 } }, { "frame": 77, "bounds": {"x": 27, "y": 12, "w": 10, "h": 12 } }, { "frame": 78, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] },
-   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 14, "y": 9, "w": 11, "h": 31 } }, { "frame": 31, "bounds": {"x": 14, "y": 9, "w": 11, "h": 31 } }] }
+   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 20, "bounds": {"x": 23, "y": 20, "w": 9, "h": 9 } }, { "frame": 22, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 33, "bounds": {"x": 30, "y": 21, "w": 5, "h": 4 } }, { "frame": 34, "bounds": {"x": 32, "y": 20, "w": 6, "h": 6 } }, { "frame": 35, "bounds": {"x": 33, "y": 19, "w": 6, "h": 8 } }, { "frame": 36, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 37, "bounds": {"x": 26, "y": 21, "w": 5, "h": 4 } }, { "frame": 38, "bounds": {"x": 31, "y": 19, "w": 6, "h": 6 } }, { "frame": 39, "bounds": {"x": 32, "y": 16, "w": 7, "h": 7 } }, { "frame": 40, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 43, "bounds": {"x": 31, "y": 21, "w": 4, "h": 4 } }, { "frame": 44, "bounds": {"x": 32, "y": 19, "w": 6, "h": 7 } }, { "frame": 45, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 46, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 47, "bounds": {"x": 32, "y": 21, "w": 4, "h": 5 } }, { "frame": 48, "bounds": {"x": 33, "y": 17, "w": 6, "h": 6 } }, { "frame": 49, "bounds": {"x": 33, "y": 13, "w": 6, "h": 7 } }, { "frame": 50, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 52, "bounds": {"x": 30, "y": 16, "w": 5, "h": 5 } }, { "frame": 53, "bounds": {"x": 33, "y": 14, "w": 7, "h": 9 } }, { "frame": 54, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 55, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 70, "bounds": {"x": 20, "y": 15, "w": 11, "h": 6 } }, { "frame": 71, "bounds": {"x": 28, "y": 14, "w": 8, "h": 8 } }, { "frame": 72, "bounds": {"x": 28, "y": 12, "w": 10, "h": 12 } }, { "frame": 73, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 75, "bounds": {"x": 20, "y": 15, "w": 10, "h": 6 } }, { "frame": 76, "bounds": {"x": 27, "y": 14, "w": 8, "h": 8 } }, { "frame": 77, "bounds": {"x": 27, "y": 12, "w": 10, "h": 12 } }, { "frame": 78, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] },
+   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 14, "y": 10, "w": 11, "h": 30 } }, { "frame": 31, "bounds": {"x": 14, "y": 9, "w": 11, "h": 31 } }] }
   ]
  }
 }
