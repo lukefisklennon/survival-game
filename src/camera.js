@@ -3,19 +3,27 @@ var config = require("./config")
 module.exports = class Camera {
 	constructor(x, y) {
 		this.screenTarget = {x: window.innerWidth / 2, y: window.innerHeight / 2}
-		this.container = new PIXI.Container()
+
+		this.layers = config.layers.map((speed, index) => {
+			let layer = new PIXI.Container()
+			layer.speed = speed
+			pixi.stage.addChild(layer)
+			return layer
+		})
+
 		// this.container.sortableChildren = true
-		pixi.stage.addChild(this.container)
 		this.x = x
 		this.y = y
 	}
 
-	add(child) {
-		this.container.addChild/*At*/(child)//, 0)
+	add(child, index) {
+		index = this.reverseIndex(index)
+		this.layers[index].addChild/*At*/(child)//, 0)
 	}
 
-	remove(child) {
-		this.container.removeChild(child)
+	remove(child, index) {
+		index = this.reverseIndex(index)
+		this.layers[index].removeChild(child)
 	}
 
 	update() {
@@ -34,18 +42,29 @@ module.exports = class Camera {
 	}
 
 	get x() {
-		return -(this.container.x - window.innerWidth / 2)
+		return -(this.layers[this.reverseIndex(0)].x - window.innerWidth / 2)
 	}
 
 	get y() {
-		return -(this.container.y - window.innerHeight / 2)
+		return -(this.layers[this.reverseIndex(0)].y - window.innerHeight + 400)
 	}
 
 	set x(x) {
-		this.container.x = -x + window.innerWidth / 2
+		this.layers.forEach(layer => {
+			layer.x = -x * layer.speed + window.innerWidth / 2
+		})
 	}
 
 	set y(y) {
-		this.container.y = -y + window.innerHeight / 2
+		this.layers.forEach(layer => {
+			layer.y = -y * layer.speed + window.innerHeight - 400
+		})
+	}
+
+	reverseIndex(index) {
+		if (index === undefined) {
+			index = 0
+		}
+		return (this.layers.length - 1) - index
 	}
 }

@@ -3,7 +3,7 @@ var animationsData = require("./animations")
 var config = require("./config")
 
 module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
-	constructor(asset) {
+	constructor(asset, index) {
 		var animations = {}
 		var image = Util.imagePath(asset)
 		var data = Util.imageData(asset)
@@ -39,7 +39,7 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 		this.scale = new PIXI.Point(config.scale, config.scale)
 		this._state = state
 		this.animations = animations
-		world.camera.add(this)
+		world.camera.add(this, index)
 		this.play()
 	}
 

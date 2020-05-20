@@ -10,6 +10,10 @@ var simplex = new SimplexNoise()
 
 module.exports = class Environment {
 	constructor() {
+		this.mountain = new Mountain(0, 100)
+		this.mountain2 = new Mountain(200, 250)
+		this.mountain3 = new Mountain(400, 400)
+		this.mountain4 = new Mountain(600, 550)
 		this.terrain = new Terrain()
 	}
 
@@ -113,6 +117,15 @@ class Column extends Entity {
 		super.destroy()
 		world.camera.remove(this.surface)
 		this.blocks.forEach(block => world.camera.remove(block))
+	}
+}
+
+class Mountain extends Sprite {
+	constructor(x, y) {
+		super("mountains-grassland", 1)
+		this.x = x
+		this.y = y
+		this.anchor.y = 1
 	}
 }
 
