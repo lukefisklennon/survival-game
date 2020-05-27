@@ -63,7 +63,7 @@ module.exports = class Humanoid extends Entity {
 		this.attackBox.x = this.x + (-this.width / 2 - 6 * config.scale / 2) * this.direction
 		this.attackBox.y = this.y - this.height / 2 - 6 * config.scale / 2
 		if (this.isAttacking) {
-			var slice = this.getAttackSlice(this.sprite.currentFrame + this.sprite.frameTags.find(tag => tag.name == "attack_0").from)
+			var slice = this.getAttackSlice(this.sprite.currentFrame + this.sprite.frameTags.find(tag => tag.name == "attack_default_0").from)
 			if (slice != null) {
 				this.attackBox.x += (slice.bounds.x * config.scale - 6 * config.scale / 2) * this.direction
 				this.attackBox.y += slice.bounds.y * config.scale - 6 * config.scale / 2
@@ -153,14 +153,14 @@ module.exports = class Humanoid extends Entity {
 			if (!this.isAttacking) {
 				this.attackBeat()
 				this.isAttacking = true
-				this.sprite.state = "attack_" + this.attackIndex
+				this.sprite.state = "attack_default_" + this.attackIndex
 				this.sprite.onComplete = function(frame) {
 					if (!this.flagEndAttack) {
 						this.attackIndex++
-						if(!("attack_" + this.attackIndex in this.sprite.animations)) {
+						if(!("attack_default_" + this.attackIndex in this.sprite.animations)) {
 							this.attackIndex = 0
 						}
-						this.sprite.state = "attack_" + this.attackIndex
+						this.sprite.state = "attack_default_" + this.attackIndex
 						this.sprite.gotoAndPlay(0)
 						this.attackBeat()
 					} else {
@@ -198,7 +198,7 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	updateIsGrounded() {
-		this.isGrounded = true//(this.belowTouching.length > 0)
+		this.isGrounded = (this.belowTouching.length > 0) // make this true to disable jumping
 	}
 
 	extractSliceData() {

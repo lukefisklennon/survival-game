@@ -8,7 +8,7 @@ var Sprite = require("./sprite")
 var World = require("./world")
 var PlayerController = require("./player-controller")
 var Pathfinder = require("./pathfinder")
-require("./index.scss")
+require("./index.css")
 // require("./config")
 
 require("./setup")()

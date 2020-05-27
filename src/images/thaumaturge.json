@@ -862,51 +862,6 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 40
-   },
-   {
-    "filename": "thaumaturge 96.aseprite",
-    "frame": { "x": 3840, "y": 0, "w": 40, "h": 40 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
-    "sourceSize": { "w": 40, "h": 40 },
-    "duration": 40
-   },
-   {
-    "filename": "thaumaturge 97.aseprite",
-    "frame": { "x": 3880, "y": 0, "w": 40, "h": 40 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
-    "sourceSize": { "w": 40, "h": 40 },
-    "duration": 40
-   },
-   {
-    "filename": "thaumaturge 98.aseprite",
-    "frame": { "x": 3920, "y": 0, "w": 40, "h": 40 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
-    "sourceSize": { "w": 40, "h": 40 },
-    "duration": 40
-   },
-   {
-    "filename": "thaumaturge 99.aseprite",
-    "frame": { "x": 3960, "y": 0, "w": 40, "h": 40 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
-    "sourceSize": { "w": 40, "h": 40 },
-    "duration": 40
-   },
-   {
-    "filename": "thaumaturge 100.aseprite",
-    "frame": { "x": 4000, "y": 0, "w": 40, "h": 40 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
-    "sourceSize": { "w": 40, "h": 40 },
-    "duration": 40
    }
  ],
  "meta": {
@@ -914,26 +869,26 @@
   "version": "1.2.18-x64",
   "image": "thaumaturge.png",
   "format": "RGBA8888",
-  "size": { "w": 4040, "h": 40 },
+  "size": { "w": 3840, "h": 40 },
   "scale": "1",
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
    { "name": "run", "from": 1, "to": 16, "direction": "forward" },
    { "name": "run-start", "from": 17, "to": 17, "direction": "forward" },
-   { "name": "attack_default_0", "from": 18, "to": 26, "direction": "forward" },
-   { "name": "attack_default_1", "from": 27, "to": 35, "direction": "forward" },
-   { "name": "hurt", "from": 36, "to": 36, "direction": "forward" },
-   { "name": "run-24fps", "from": 37, "to": 52, "direction": "forward" },
-   { "name": "attack-fists", "from": 53, "to": 57, "direction": "forward" },
-   { "name": "attack-fists_1", "from": 58, "to": 62, "direction": "forward" },
-   { "name": "attack-fists_2", "from": 63, "to": 67, "direction": "forward" },
-   { "name": "attack-fists_3", "from": 68, "to": 72, "direction": "forward" },
-   { "name": "attack-fists_4", "from": 73, "to": 77, "direction": "forward" },
-   { "name": "jump-run", "from": 78, "to": 83, "direction": "forward" },
-   { "name": "jump-static", "from": 84, "to": 89, "direction": "forward" },
-   { "name": "jump-end", "from": 90, "to": 90, "direction": "forward" },
-   { "name": "attack-fists-air_0", "from": 91, "to": 95, "direction": "forward" },
-   { "name": "attack-fists-air_1", "from": 96, "to": 100, "direction": "forward" }
+   { "name": "attack_default_0", "from": 18, "to": 25, "direction": "forward" },
+   { "name": "attack_default_6", "from": 28, "to": 30, "direction": "forward" },
+   { "name": "hurt", "from": 31, "to": 31, "direction": "forward" },
+   { "name": "run-24fps", "from": 32, "to": 47, "direction": "forward" },
+   { "name": "attack_default", "from": 48, "to": 52, "direction": "forward" },
+   { "name": "attack_default_1", "from": 53, "to": 57, "direction": "forward" },
+   { "name": "attack_default_2", "from": 58, "to": 62, "direction": "forward" },
+   { "name": "attack_default_3", "from": 63, "to": 67, "direction": "forward" },
+   { "name": "attack_default_4", "from": 68, "to": 72, "direction": "forward" },
+   { "name": "jump-run", "from": 73, "to": 78, "direction": "forward" },
+   { "name": "jump-static", "from": 79, "to": 84, "direction": "forward" },
+   { "name": "jump-end", "from": 85, "to": 85, "direction": "forward" },
+   { "name": "attack_default-air_0", "from": 86, "to": 90, "direction": "forward" },
+   { "name": "attack_default-air_1", "from": 91, "to": 95, "direction": "forward" }
   ],
   "slices": [
    { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 20, "bounds": {"x": 23, "y": 20, "w": 9, "h": 9 } }, { "frame": 22, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 33, "bounds": {"x": 30, "y": 21, "w": 5, "h": 4 } }, { "frame": 34, "bounds": {"x": 32, "y": 20, "w": 6, "h": 6 } }, { "frame": 35, "bounds": {"x": 33, "y": 19, "w": 6, "h": 8 } }, { "frame": 36, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 37, "bounds": {"x": 26, "y": 21, "w": 5, "h": 4 } }, { "frame": 38, "bounds": {"x": 31, "y": 19, "w": 6, "h": 6 } }, { "frame": 39, "bounds": {"x": 32, "y": 16, "w": 7, "h": 7 } }, { "frame": 40, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 43, "bounds": {"x": 31, "y": 21, "w": 4, "h": 4 } }, { "frame": 44, "bounds": {"x": 32, "y": 19, "w": 6, "h": 7 } }, { "frame": 45, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 46, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 47, "bounds": {"x": 32, "y": 21, "w": 4, "h": 5 } }, { "frame": 48, "bounds": {"x": 33, "y": 17, "w": 6, "h": 6 } }, { "frame": 49, "bounds": {"x": 33, "y": 13, "w": 6, "h": 7 } }, { "frame": 50, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 52, "bounds": {"x": 30, "y": 16, "w": 5, "h": 5 } }, { "frame": 53, "bounds": {"x": 33, "y": 14, "w": 7, "h": 9 } }, { "frame": 54, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 55, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 70, "bounds": {"x": 20, "y": 15, "w": 11, "h": 6 } }, { "frame": 71, "bounds": {"x": 28, "y": 14, "w": 8, "h": 8 } }, { "frame": 72, "bounds": {"x": 28, "y": 12, "w": 10, "h": 12 } }, { "frame": 73, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 75, "bounds": {"x": 20, "y": 15, "w": 10, "h": 6 } }, { "frame": 76, "bounds": {"x": 27, "y": 14, "w": 8, "h": 8 } }, { "frame": 77, "bounds": {"x": 27, "y": 12, "w": 10, "h": 12 } }, { "frame": 78, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] },
