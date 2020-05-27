@@ -1,17 +1,16 @@
 module.exports = class Pathfinder {
-	constructor(bla) {
+	constructor() {
 		this.target = null
-		this.bla = bla
+		this.targetRange = 50
 	}
 
 	run(entity) {
-		if (this.target != null && Math.abs(this.target.x - entity.x) > this.bla) {
+		if (this.target != null && Math.abs(this.target.x - entity.x) > this.targetRange) {
 			entity.move(Math.sign(this.target.x - entity.x))
-			entity.attack(0)
+			return false
 		} else {
 			entity.move(0)
-			entity.attack(Math.sign(this.target.x - entity.x))
-			// if (Math.random() < 0.03) entity.attack(Math.sign(this.target.x - entity.x))
+			return true
 		}
 	}
 }

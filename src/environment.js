@@ -60,7 +60,8 @@ class Terrain extends Store {
 			y += Math.round((simplex.noise2D(x / octave.wavelength, 16) * 0.5 + 0.5) * octave.amplitude)
 		})
 		y = Math.round(y / config.terrain.stepHeight) * config.terrain.stepHeight
-		return y * config.scale
+		// return y * config.scale
+		return 300
 	}
 
 	emplaceLeft(...args) {

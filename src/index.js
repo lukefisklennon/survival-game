@@ -7,7 +7,7 @@ var Campfire = require("./campfire")
 var Sprite = require("./sprite")
 var World = require("./world")
 var PlayerController = require("./player-controller")
-var Pathfinder = require("./pathfinder")
+var Enemy = require("./enemy")
 require("./index.css")
 // require("./config")
 
@@ -29,34 +29,29 @@ load(() => {
 		asset: "goblin",
 		x: -500,
 		y: 0,
-		controller: new Pathfinder(300)//500)
+		controller: new Enemy(-500, 0)
 	})
 
 	var enemy2 = new Character({
 		asset: "goblin",
 		x: -250,
 		y: 0,
-		controller: new Pathfinder(300)
+		controller: new Enemy(-250, 0)
 	})
 
 	var enemy3 = new Character({
 		asset: "goblin",
 		x: 250,
 		y: 0,
-		controller: new Pathfinder(300)//700)
+		controller: new Enemy(250, 0)
 	})
 
 	var enemy4 = new Character({
 		asset: "goblin",
 		x: 500,
 		y: 0,
-		controller: new Pathfinder(300)//900)
+		controller: new Enemy(500, 0)
 	})
-
-	enemy1.controller.target = world.player
-	enemy2.controller.target = world.player
-	enemy3.controller.target = world.player
-	enemy4.controller.target = world.player
 
 	pixi.ticker.add(() => {
 		world.update(pixi.ticker.elapsedMS)

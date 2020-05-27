@@ -157,7 +157,8 @@ module.exports = class Humanoid extends Entity {
 				this.sprite.onComplete = function(frame) {
 					if (!this.flagEndAttack) {
 						this.attackIndex++
-						if(!("attack_default_" + this.attackIndex in this.sprite.animations)) {
+						// if(!("attack_default_" + this.attackIndex in this.sprite.animations)) {
+						if (this.attackIndex > 1) {
 							this.attackIndex = 0
 						}
 						this.sprite.state = "attack_default_" + this.attackIndex
@@ -198,7 +199,7 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	updateIsGrounded() {
-		this.isGrounded = (this.belowTouching.length > 0) // make this true to disable jumping
+		this.isGrounded = true//(this.belowTouching.length > 0) // make this true to disable jumping
 	}
 
 	extractSliceData() {
