@@ -916,6 +916,24 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
     "sourceSize": { "w": 40, "h": 40 },
     "duration": 40
+   },
+   {
+    "filename": "thaumaturge 102.aseprite",
+    "frame": { "x": 4080, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 40
+   },
+   {
+    "filename": "thaumaturge 103.aseprite",
+    "frame": { "x": 4120, "y": 0, "w": 40, "h": 40 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 40 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 40
    }
  ],
  "meta": {
@@ -923,31 +941,33 @@
   "version": "1.2.18-x64",
   "image": "thaumaturge.png",
   "format": "RGBA8888",
-  "size": { "w": 4080, "h": 40 },
+  "size": { "w": 4160, "h": 40 },
   "scale": "1",
   "frameTags": [
    { "name": "static", "from": 0, "to": 0, "direction": "forward" },
    { "name": "run", "from": 1, "to": 16, "direction": "forward" },
-   { "name": "run-start", "from": 17, "to": 17, "direction": "forward" },
+   { "name": "run_start", "from": 17, "to": 17, "direction": "forward" },
    { "name": "attack_default_0", "from": 18, "to": 26, "direction": "forward" },
    { "name": "attack_default_1", "from": 27, "to": 35, "direction": "forward" },
-   { "name": "jump-static", "from": 36, "to": 36, "direction": "forward" },
-   { "name": "hurt", "from": 37, "to": 37, "direction": "forward" },
-   { "name": "run-24fps", "from": 38, "to": 53, "direction": "forward" },
-   { "name": "attack-fists", "from": 54, "to": 58, "direction": "forward" },
-   { "name": "attack-fists_1", "from": 59, "to": 63, "direction": "forward" },
-   { "name": "attack-fists_2", "from": 64, "to": 68, "direction": "forward" },
-   { "name": "attack-fists_3", "from": 69, "to": 73, "direction": "forward" },
-   { "name": "attack-fists_4", "from": 74, "to": 78, "direction": "forward" },
-   { "name": "jump-run", "from": 79, "to": 84, "direction": "forward" },
-   { "name": "jump-static", "from": 85, "to": 90, "direction": "forward" },
-   { "name": "jump-end", "from": 91, "to": 91, "direction": "forward" },
-   { "name": "attack-fists-air_0", "from": 92, "to": 96, "direction": "forward" },
-   { "name": "attack-fists-air_1", "from": 97, "to": 101, "direction": "forward" }
+   { "name": "jump_static", "from": 36, "to": 36, "direction": "forward" },
+   { "name": "jump_run", "from": 37, "to": 37, "direction": "forward" },
+   { "name": "walk", "from": 38, "to": 38, "direction": "forward" },
+   { "name": "hurt", "from": 39, "to": 39, "direction": "forward" },
+   { "name": "run-24fps", "from": 40, "to": 55, "direction": "forward" },
+   { "name": "attack-fists", "from": 56, "to": 60, "direction": "forward" },
+   { "name": "attack-fists_1", "from": 61, "to": 65, "direction": "forward" },
+   { "name": "attack-fists_2", "from": 66, "to": 70, "direction": "forward" },
+   { "name": "attack-fists_3", "from": 71, "to": 75, "direction": "forward" },
+   { "name": "attack-fists_4", "from": 76, "to": 80, "direction": "forward" },
+   { "name": "jump-run-old", "from": 81, "to": 86, "direction": "forward" },
+   { "name": "jump-static-old", "from": 87, "to": 92, "direction": "forward" },
+   { "name": "jump-end", "from": 93, "to": 93, "direction": "forward" },
+   { "name": "attack-fists-air_0", "from": 94, "to": 98, "direction": "forward" },
+   { "name": "attack-fists-air_1", "from": 99, "to": 103, "direction": "forward" }
   ],
   "slices": [
-   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 20, "bounds": {"x": 23, "y": 20, "w": 9, "h": 9 } }, { "frame": 22, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 33, "bounds": {"x": 30, "y": 21, "w": 5, "h": 4 } }, { "frame": 34, "bounds": {"x": 32, "y": 20, "w": 6, "h": 6 } }, { "frame": 35, "bounds": {"x": 33, "y": 19, "w": 6, "h": 8 } }, { "frame": 36, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 37, "bounds": {"x": 26, "y": 21, "w": 5, "h": 4 } }, { "frame": 38, "bounds": {"x": 31, "y": 19, "w": 6, "h": 6 } }, { "frame": 39, "bounds": {"x": 32, "y": 16, "w": 7, "h": 7 } }, { "frame": 40, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 43, "bounds": {"x": 31, "y": 21, "w": 4, "h": 4 } }, { "frame": 44, "bounds": {"x": 32, "y": 19, "w": 6, "h": 7 } }, { "frame": 45, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 46, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 47, "bounds": {"x": 32, "y": 21, "w": 4, "h": 5 } }, { "frame": 48, "bounds": {"x": 33, "y": 17, "w": 6, "h": 6 } }, { "frame": 49, "bounds": {"x": 33, "y": 13, "w": 6, "h": 7 } }, { "frame": 50, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 52, "bounds": {"x": 30, "y": 16, "w": 5, "h": 5 } }, { "frame": 53, "bounds": {"x": 33, "y": 14, "w": 7, "h": 9 } }, { "frame": 54, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 55, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 70, "bounds": {"x": 20, "y": 15, "w": 11, "h": 6 } }, { "frame": 71, "bounds": {"x": 28, "y": 14, "w": 8, "h": 8 } }, { "frame": 72, "bounds": {"x": 28, "y": 12, "w": 10, "h": 12 } }, { "frame": 73, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 75, "bounds": {"x": 20, "y": 15, "w": 10, "h": 6 } }, { "frame": 76, "bounds": {"x": 27, "y": 14, "w": 8, "h": 8 } }, { "frame": 77, "bounds": {"x": 27, "y": 12, "w": 10, "h": 12 } }, { "frame": 78, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] },
-   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 14, "y": 10, "w": 11, "h": 30 } }, { "frame": 31, "bounds": {"x": 14, "y": 9, "w": 11, "h": 31 } }] }
+   { "name": "hitbox-attacks", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 20, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 21, "bounds": {"x": 21, "y": 20, "w": 11, "h": 9 } }, { "frame": 22, "bounds": {"x": 21, "y": 20, "w": 11, "h": 9 } }, { "frame": 23, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 30, "bounds": {"x": 21, "y": 21, "w": 11, "h": 9 } }, { "frame": 32, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 33, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 34, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 35, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 36, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 37, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 38, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 39, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 40, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 43, "bounds": {"x": 31, "y": 21, "w": 4, "h": 4 } }, { "frame": 44, "bounds": {"x": 32, "y": 19, "w": 6, "h": 7 } }, { "frame": 45, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 46, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 47, "bounds": {"x": 32, "y": 21, "w": 4, "h": 5 } }, { "frame": 48, "bounds": {"x": 33, "y": 17, "w": 6, "h": 6 } }, { "frame": 49, "bounds": {"x": 33, "y": 13, "w": 6, "h": 7 } }, { "frame": 50, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 52, "bounds": {"x": 30, "y": 16, "w": 5, "h": 5 } }, { "frame": 53, "bounds": {"x": 33, "y": 14, "w": 7, "h": 9 } }, { "frame": 54, "bounds": {"x": 33, "y": 18, "w": 7, "h": 8 } }, { "frame": 55, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 70, "bounds": {"x": 20, "y": 15, "w": 11, "h": 6 } }, { "frame": 71, "bounds": {"x": 28, "y": 14, "w": 8, "h": 8 } }, { "frame": 72, "bounds": {"x": 28, "y": 12, "w": 10, "h": 12 } }, { "frame": 73, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }, { "frame": 75, "bounds": {"x": 20, "y": 15, "w": 10, "h": 6 } }, { "frame": 76, "bounds": {"x": 27, "y": 14, "w": 8, "h": 8 } }, { "frame": 77, "bounds": {"x": 27, "y": 12, "w": 10, "h": 12 } }, { "frame": 78, "bounds": {"x": -1, "y": -1, "w": 1, "h": 1 } }] },
+   { "name": "hitbox-body", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 14, "y": 10, "w": 11, "h": 30 } }, { "frame": 31, "bounds": {"x": 14, "y": 10, "w": 11, "h": 30 } }] }
   ]
  }
 }
