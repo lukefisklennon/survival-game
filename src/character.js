@@ -13,7 +13,7 @@ module.exports = class Character extends Humanoid {
 	}
 
 	update() {
-		this.hp += 0.001
+		this.hp += 0.0002
 		if (this.hp > 1) this.hp = 1
 		if (this.hp < 0) {
 			// var Pathfinder = require("./pathfinder")

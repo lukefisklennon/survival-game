@@ -16,7 +16,7 @@ require("./setup")()
 load(() => {
 	new World()
 
-	var campfire = new Campfire(0, 200)
+	var campfire = new Campfire(0, 150)
 
 	world.player = new Character({
 		asset: "thaumaturge",
@@ -25,33 +25,18 @@ load(() => {
 		controller: new PlayerController()
 	})
 
-	var enemy1 = new Character({
-		asset: "goblin",
-		x: -500,
-		y: 0,
-		controller: new Enemy(-500, 0)
-	})
-
-	var enemy2 = new Character({
-		asset: "goblin",
-		x: -250,
-		y: 0,
-		controller: new Enemy(-250, 0)
-	})
-
-	var enemy3 = new Character({
-		asset: "goblin",
-		x: 250,
-		y: 0,
-		controller: new Enemy(250, 0)
-	})
-
-	var enemy4 = new Character({
-		asset: "goblin",
-		x: 500,
-		y: 0,
-		controller: new Enemy(500, 0)
-	})
+	var n = 40
+	var range = n * 50
+	for (var i = 0; i < n; i++) {
+		var x = Math.random() * range - range / 2
+		var y = 0
+		new Character({
+			asset: "goblin",
+			x: x,
+			y: y,
+			controller: new Enemy(x, y)
+		})
+	}
 
 	pixi.ticker.add(() => {
 		world.update(pixi.ticker.elapsedMS)

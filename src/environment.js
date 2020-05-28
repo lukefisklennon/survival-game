@@ -61,7 +61,7 @@ class Terrain extends Store {
 		})
 		y = Math.round(y / config.terrain.stepHeight) * config.terrain.stepHeight
 		// return y * config.scale
-		return 300
+		return 150
 	}
 
 	emplaceLeft(...args) {

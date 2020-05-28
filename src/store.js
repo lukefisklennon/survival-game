@@ -38,11 +38,11 @@ module.exports = class Store {
 	}
 
 	loop(callback) {
-		// for (var i = 0; i < list.length; i++) {
-		// 	var length = list.length
-		// 	callback(list[i], i)
-		// }
 		this.list.forEach(callback)
+	}
+
+	filter(callback) {
+		return this.list.filter(callback)
 	}
 
 	get length() {

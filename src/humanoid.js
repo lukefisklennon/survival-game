@@ -10,7 +10,9 @@ module.exports = class Humanoid extends Entity {
 		super(options)
 		this.blaasset = options.asset // TODO
 
+		this.running = true
 		this.isAttacking = false
+		this.isAttackingNow = false
 		this.flagEndAttack = false
 		this.attackDirection = 0
 		this.attackBox = new Entity({
@@ -20,12 +22,13 @@ module.exports = class Humanoid extends Entity {
 			height: 6 * config.scale
 		})
 		this.attackIndex = 0
+		this.attackReloadTime = this.blaasset == "thaumaturge" ? 0 : 1000
 
 		this.attackBox.on("collisionStart", (entity, event) => {
-			if (this.isAttacking && entity != this && entity.constructor.name == "Character") {
-				entity.vx += 3 * this.direction
+			if (this.isAttacking && entity != this && entity.constructor.name == "Character" && !(this.blaasset == "goblin" && entity.blaasset == "goblin")) {
+				// entity.vx += 3 * this.direction
 				if (entity == world.player) {
-					entity.hp -= 0.13 / 5
+					entity.hp -= 0.13 / 100
 				} else {
 					entity.hp -= 0.13
 				}
@@ -44,9 +47,9 @@ module.exports = class Humanoid extends Entity {
 					this.belowTouching.push(entity)
 					this.updateIsGrounded()
 				}
-				if (event.collision.normal.y == 0) {
-					this.y -= config.terrain.stepHeight * config.scale
-				}
+				// if (event.collision.normal.y == 0) {
+				// 	this.y -= config.terrain.stepHeight * config.scale
+				// }
 			}
 		})
 
@@ -92,28 +95,30 @@ module.exports = class Humanoid extends Entity {
 		// }
 	}
 
-	move(x) {
-		if (!this.isAttacking) {
+	move(x, walking) {
+		if (!this.isAttackingNow) {
 			var accelerationFactor = config.player.accelerationFactor
 			if (!this.isGrounded) accelerationFactor *= config.humanoid.airAccelerationFactor
+			if (walking) accelerationFactor *= 0.1
 			this.setMovement(x * config.player.speed, accelerationFactor)
 			if (this.isGrounded) {
 				if (x != 0) {
 					if (this.blaasset == "thaumaturge") {
 						if (this.sprite.state == "static") {
-							this.sprite.transition("run", "run-start", config.humanoid.runTransitionFactor)
+							this.sprite.transition("run", "run_start", config.humanoid.runTransitionFactor)
 						} else if (this.sprite.state.includes("jump")) {
-							this.sprite.transition("run", "jump-end", config.humanoid.runTransitionFactor)
+							this.sprite.transition("run", "jump_end", config.humanoid.runTransitionFactor)
 						}
 					} else {
-						this.sprite.state = "run"
+						this.running = walking ? false : true
+						this.sprite.state = this.running ? "run" : "walk"
 					}
 				} else {
 					if (this.blaasset == "thaumaturge") {
 						if (this.sprite.state == "run") {
-							this.sprite.transition("static", "run-start", config.humanoid.runTransitionFactor)
+							this.sprite.transition("static", "run_start", config.humanoid.runTransitionFactor)
 						} else if (this.sprite.state.includes("jump")) {
-							this.sprite.transition("static", "jump-end", config.humanoid.runTransitionFactor)
+							this.sprite.transition("static", "jump_end", config.humanoid.runTransitionFactor)
 						}
 					} else {
 						this.sprite.state = "static"
@@ -153,19 +158,26 @@ module.exports = class Humanoid extends Entity {
 			if (!this.isAttacking) {
 				this.attackBeat()
 				this.isAttacking = true
+				this.isAttackingNow = true
 				this.sprite.state = "attack_default_" + this.attackIndex
 				this.sprite.onComplete = function(frame) {
 					if (!this.flagEndAttack) {
-						this.attackIndex++
-						// if(!("attack_default_" + this.attackIndex in this.sprite.animations)) {
-						if (this.attackIndex > 1) {
-							this.attackIndex = 0
-						}
-						this.sprite.state = "attack_default_" + this.attackIndex
-						this.sprite.gotoAndPlay(0)
-						this.attackBeat()
+						this.isAttackingNow = false
+						setTimeout(() => {
+							if (this.isAttacking && !this.flagEndAttack) {
+								this.isAttackingNow = true
+								this.attackIndex++
+								if (this.attackIndex > 1 || !("attack_default_" + this.attackIndex in this.sprite.animations)) {
+									this.attackIndex = 0
+								}
+								this.sprite.state = "attack_default_" + this.attackIndex
+								this.sprite.gotoAndPlay(0)
+								this.attackBeat()
+							}
+						}, this.attackReloadTime)
 					} else {
 						this.isAttacking = false
+						this.isAttackingNow = false
 						this.flagEndAttack = false
 						this.sprite.state = "static"
 						this.attackIndex = 0
@@ -180,7 +192,7 @@ module.exports = class Humanoid extends Entity {
 
 	attackBeat() {
 		this.direction = this.attackDirection
-		this.vx += 3 * this.attackDirection
+		// this.vx += 3 * this.attackDirection
 	}
 
 	handleJumpState(to) {
@@ -192,8 +204,8 @@ module.exports = class Humanoid extends Entity {
 		}
 		var oldState = this.sprite.state
 		var oldCurrentFrame = this.sprite.currentFrame
-		this.sprite.state = "jump-" + to
-		if (oldState == "jump-" + from) {
+		this.sprite.state = "jump_" + to
+		if (oldState == "jump_" + from) {
 			this.sprite.gotoAndPlay(oldCurrentFrame)
 		}
 	}
@@ -203,7 +215,7 @@ module.exports = class Humanoid extends Entity {
 	}
 
 	extractSliceData() {
-		this.slices = this.sprite.slices.find(slice => slice.name == "hitbox-attacks").keys
+		this.slices = this.sprite.slices.find(slice => slice.name == "hitbox_attacks").keys
 	}
 
 	getAttackSlice(frame) {
